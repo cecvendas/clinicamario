@@ -1,0 +1,8525 @@
+
+/* =========================================================
+   ZERO V1.6 — CORREÇÃO MENU LATERAL RECOLHIDO
+========================================================= */
+.layout .sidebar.collapsed,
+#sidebar.sidebar.collapsed{
+  width:78px !important;
+  min-width:78px !important;
+  max-width:78px !important;
+  flex:0 0 78px !important;
+}
+
+.layout .sidebar.collapsed .nav button{
+  justify-content:center !important;
+  padding-left:10px !important;
+  padding-right:10px !important;
+  gap:0 !important;
+}
+
+.layout .sidebar.collapsed .nav span,
+#sidebar.sidebar.collapsed .nav span{
+  display:none !important;
+}
+
+.layout .sidebar.collapsed .side-toggle{
+  margin-left:12px !important;
+  margin-right:12px !important;
+}
+
+.layout .sidebar{
+  flex:0 0 260px !important;
+}
+
+
+
+/* =========================================================
+   ZERO V1.5 — VISUAL ORIGINAL / LOYALT PRESERVADO
+========================================================= */
+html,body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#f4f6fa;
+}
+
+#login-page{
+  min-height:100vh !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:linear-gradient(135deg,#1a56db 0%,#0e9f6e 100%) !important;
+}
+
+#login-page.hidden{
+  display:none !important;
+}
+
+.login-brand-logo{
+  display:block!important;
+  width:min(270px,74vw)!important;
+  max-height:270px!important;
+  object-fit:contain!important;
+  margin:0 auto 18px!important;
+  mix-blend-mode:multiply!important;
+  filter:drop-shadow(0 10px 24px rgba(15,23,42,.10))!important;
+}
+
+#app-shell{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+#app-shell.hidden,
+#app-shell.app-hidden{
+  display:none !important;
+}
+
+.header{
+  background:#fff;
+  border-bottom:1px solid #e8eaf0;
+  padding:0 24px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:200;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+}
+
+.header-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:18px;
+  color:#1a56db;
+}
+
+.hbrand-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#1a56db,#0e9f6e);
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.user-pill{
+  background:#f1f5f9;
+  border:1px solid #e2e8f0;
+  border-radius:999px;
+  padding:7px 12px;
+  color:#334155;
+  font-size:13px;
+  font-weight:700;
+}
+
+.layout{
+  flex:1;
+  display:flex;
+  min-height:calc(100vh - 60px);
+}
+
+.sidebar{
+  width:260px;
+  background:#fff;
+  border-right:1px solid #e8eaf0;
+  color:#334155;
+  display:flex;
+  flex-direction:column;
+  transition:.2s;
+  box-shadow:1px 0 4px rgba(0,0,0,.04);
+}
+
+.sidebar.collapsed{
+  width:78px;
+}
+
+.side-toggle{
+  margin:14px;
+  background:#f4f6fa;
+  color:#1a56db;
+  border:1px solid #e8eaf0;
+  border-radius:10px;
+  padding:10px;
+  cursor:pointer;
+  font-weight:900;
+}
+
+.nav{
+  padding:0 12px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.nav button{
+  border:0;
+  background:transparent;
+  color:#334155;
+  text-align:left;
+  padding:12px 14px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.nav button.active,
+.nav button:hover{
+  background:linear-gradient(90deg,rgba(26,86,219,.10),rgba(14,159,110,.08));
+  color:#1a56db;
+}
+
+.sidebar.collapsed .nav span{
+  display:none;
+}
+
+.main{
+  flex:1;
+  min-width:0;
+  background:#f4f6fa;
+}
+
+.topbar{
+  height:auto;
+  min-height:72px;
+  background:transparent;
+  border-bottom:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px 24px 0;
+}
+
+.topbar h2{
+  margin:0;
+  color:#111827;
+  font-weight:900;
+}
+
+.topbar p{
+  margin:4px 0 0;
+  color:#6b7280;
+}
+
+.content{
+  padding:20px 24px 28px;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #e8eaf0;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.04);
+}
+
+.btn-blue{background:#1a56db;color:#fff}
+.btn-green{background:#0e9f6e;color:#fff}
+.btn-purple{background:#7c3aed;color:#fff}
+.btn-red{background:#dc2626;color:#fff}
+.btn-outline{background:#fff;border:1px solid #e8eaf0;color:#334155}
+.btn-ghost{background:#f4f6fa;color:#334155}
+
+.tabs button.active{
+  background:#1a56db;
+  border-color:#1a56db;
+}
+
+@media(max-width:900px){
+  .layout{display:block}
+  .sidebar{width:100%;position:relative;height:auto}
+  .sidebar.collapsed{width:100%}
+}
+
+
+
+:root{
+  --blue:#2563eb;--blue2:#1d4ed8;--green:#16a34a;--red:#dc2626;--purple:#7c3aed;
+  --bg:#f5f7fb;--card:#fff;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;
+}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.hidden{display:none!important}
+.login-screen{min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#e0f2fe,#eef2ff)}
+.login-card{width:min(420px,92vw);background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 28px 80px rgba(15,23,42,.14)}
+.brand{display:flex;gap:14px;align-items:center;margin-bottom:24px}.brand h1{margin:0;font-size:24px}.brand p{margin:3px 0 0;color:var(--muted)}
+.brand-icon{width:54px;height:54px;border-radius:16px;background:#dbeafe;display:grid;place-items:center;font-size:28px}.brand-icon.small{width:42px;height:42px;font-size:22px}
+label{display:block;font-weight:800;font-size:13px;color:#334155;margin:10px 0 6px}
+input,select,textarea{width:100%;border:1.5px solid #cbd5e1;border-radius:12px;padding:11px 12px;font:inherit;outline:none;background:#fff}
+textarea{resize:vertical;min-height:90px}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.login-help{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+.app-shell{display:flex;min-height:100vh}.sidebar{width:272px;background:#0f172a;color:white;display:flex;flex-direction:column;transition:.2s;width:272px}
+.sidebar.collapsed{width:82px}.side-brand{padding:18px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+.side-title{display:flex;flex-direction:column;gap:3px}.side-title span{font-size:12px;color:#cbd5e1}.collapsed .side-title,.collapsed .nav span{display:none}
+.side-toggle{margin:10px 14px;background:#1e293b;color:#fff;border:0;border-radius:12px;padding:10px;cursor:pointer}
+.nav{padding:8px 12px;display:flex;flex-direction:column;gap:8px}.nav button{border:0;background:transparent;color:#dbeafe;text-align:left;padding:12px;border-radius:12px;font-size:15px;cursor:pointer}.nav button.active,.nav button:hover{background:#1e293b;color:#fff}
+.side-footer{margin-top:auto;padding:14px}.main{flex:1;min-width:0}.topbar{height:84px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px}.topbar h2{margin:0}.topbar p{margin:4px 0 0;color:var(--muted)}
+.content{padding:24px;max-width:1400px;margin:0 auto}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.05);margin-bottom:16px}
+.grid{display:grid;gap:14px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.full{grid-column:1/-1}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}.right{justify-content:flex-end}
+.btn{border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer;background:#e2e8f0;color:#0f172a}.btn:hover{filter:brightness(.97)}
+.btn-sm{padding:7px 10px;font-size:12px}.btn-blue{background:var(--blue);color:#fff}.btn-green{background:var(--green);color:#fff}.btn-red{background:var(--red);color:#fff}.btn-purple{background:var(--purple);color:#fff}.btn-outline{background:#fff;border:1px solid var(--line)}.btn-ghost{background:#f1f5f9}.w100{width:100%}
+.table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;border-bottom:1px solid var(--line);padding:11px}.table th{font-size:12px;color:var(--muted);text-transform:uppercase}.badge{font-size:12px;border-radius:999px;padding:4px 8px;background:#e0f2fe;color:#075985;font-weight:800}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:800;cursor:pointer}.tabs button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.patient-top{background:#eef6ff;border:1px solid #bfdbfe;border-radius:16px;padding:12px;margin-bottom:14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.doc-card{border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;display:flex;justify-content:space-between;gap:12px;align-items:center}.doc-title{font-weight:900}.doc-sub{font-size:12px;color:var(--muted);margin-top:3px}.doc-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}.modal{width:min(960px,96vw);max-height:92vh;overflow:auto;background:#fff;border-radius:20px;box-shadow:0 24px 100px rgba(0,0,0,.28)}.modal.lg{width:min(1180px,96vw)}
+.modal-title{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:18px}.modal-body{padding:18px}.modal-footer{border-top:1px solid var(--line);padding:14px 18px;display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}.modal-x{border:0;background:#f1f5f9;border-radius:10px;width:34px;height:34px;font-size:20px;cursor:pointer}
+.toast{position:fixed;right:18px;bottom:18px;background:#0f172a;color:#fff;padding:12px 14px;border-radius:12px;z-index:2000;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+@media(max-width:900px){.grid-2,.grid-3,.grid-4,.patient-top{grid-template-columns:1fr}.sidebar{position:fixed;z-index:900;height:100vh}.main{margin-left:0}.content{padding:14px}}
+@media print{body{background:#fff}.no-print{display:none!important}}
+
+
+
+/* =========================================================
+   ZERO V1.7 — FIX REAL SIDEBAR NO FINAL DO CSS
+========================================================= */
+#app-shell .layout{
+  display:flex !important;
+  width:100% !important;
+}
+
+#app-shell #sidebar.sidebar{
+  width:260px !important;
+  min-width:260px !important;
+  max-width:260px !important;
+  flex:0 0 260px !important;
+  transition:width .2s ease, min-width .2s ease, max-width .2s ease, flex-basis .2s ease !important;
+}
+
+#app-shell #sidebar.sidebar.collapsed{
+  width:76px !important;
+  min-width:76px !important;
+  max-width:76px !important;
+  flex:0 0 76px !important;
+}
+
+#app-shell #sidebar.sidebar.collapsed .nav span{
+  display:none !important;
+}
+
+#app-shell #sidebar.sidebar.collapsed .nav button{
+  justify-content:center !important;
+  padding-left:8px !important;
+  padding-right:8px !important;
+}
+
+#app-shell #sidebar.sidebar.collapsed .side-toggle{
+  width:48px !important;
+  margin-left:14px !important;
+  margin-right:14px !important;
+}
+
+#app-shell .main{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+
+
+/* =========================================================
+   ZERO V1.8 — SIDEBAR REAL SEM CONFLITO COM LEGACY
+   Usa .cm-sidebar para não brigar com .sidebar antiga.
+========================================================= */
+#app-shell .layout{
+  display:flex !important;
+  width:100% !important;
+  min-height:calc(100vh - 60px) !important;
+}
+
+#app-shell #sidebar.cm-sidebar{
+  width:260px !important;
+  min-width:260px !important;
+  max-width:260px !important;
+  flex:0 0 260px !important;
+  background:#fff !important;
+  border-right:1px solid #e8eaf0 !important;
+  color:#334155 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  transition:width .2s ease,min-width .2s ease,max-width .2s ease,flex-basis .2s ease !important;
+  box-shadow:1px 0 4px rgba(0,0,0,.04) !important;
+  overflow:hidden !important;
+}
+
+#app-shell #sidebar.cm-sidebar.collapsed{
+  width:76px !important;
+  min-width:76px !important;
+  max-width:76px !important;
+  flex:0 0 76px !important;
+}
+
+#app-shell #sidebar.cm-sidebar .side-toggle{
+  margin:14px !important;
+  background:#f4f6fa !important;
+  color:#1a56db !important;
+  border:1px solid #e8eaf0 !important;
+  border-radius:10px !important;
+  padding:10px !important;
+  cursor:pointer !important;
+  font-weight:900 !important;
+}
+
+#app-shell #sidebar.cm-sidebar.collapsed .side-toggle{
+  width:48px !important;
+  margin-left:14px !important;
+  margin-right:14px !important;
+}
+
+#app-shell #sidebar.cm-sidebar .nav{
+  padding:0 12px 14px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap:6px !important;
+}
+
+#app-shell #sidebar.cm-sidebar .nav button{
+  border:0 !important;
+  background:transparent !important;
+  color:#334155 !important;
+  text-align:left !important;
+  padding:12px 14px !important;
+  border-radius:10px !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  cursor:pointer !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  white-space:nowrap !important;
+}
+
+#app-shell #sidebar.cm-sidebar .nav button.active,
+#app-shell #sidebar.cm-sidebar .nav button:hover{
+  background:linear-gradient(90deg,rgba(26,86,219,.10),rgba(14,159,110,.08)) !important;
+  color:#1a56db !important;
+}
+
+#app-shell #sidebar.cm-sidebar.collapsed .nav button{
+  justify-content:center !important;
+  padding-left:8px !important;
+  padding-right:8px !important;
+  gap:0 !important;
+}
+
+#app-shell #sidebar.cm-sidebar.collapsed .nav span{
+  display:none !important;
+}
+
+#app-shell .main{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+
+
+/* =========================================================
+   ZERO V1.9 — VISUALIZADOR DE EXAMES ESTILO ORIGINAL
+========================================================= */
+.cm-exame-view-backdrop{
+  position:fixed !important;
+  inset:0 !important;
+  background:rgba(15,23,42,.58) !important;
+  z-index:3000 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:18px !important;
+}
+
+.cm-exame-view-modal{
+  width:min(1180px,96vw) !important;
+  height:min(900px,94vh) !important;
+  background:#fff !important;
+  border-radius:18px !important;
+  box-shadow:0 30px 90px rgba(15,23,42,.35) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden !important;
+}
+
+.cm-exame-view-header{
+  flex:0 0 auto !important;
+  padding:16px 20px !important;
+  border-bottom:1px solid #e5e7eb !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+}
+
+.cm-exame-view-title{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  font-size:19px !important;
+  font-weight:900 !important;
+  color:#0f172a !important;
+}
+
+.cm-exame-view-file{
+  font-size:12px !important;
+  color:#64748b !important;
+  font-weight:600 !important;
+  margin-top:3px !important;
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+  white-space:nowrap !important;
+  max-width:70vw !important;
+}
+
+.cm-exame-view-close{
+  border:0 !important;
+  background:#f1f5f9 !important;
+  color:#64748b !important;
+  width:36px !important;
+  height:36px !important;
+  border-radius:12px !important;
+  font-size:20px !important;
+  cursor:pointer !important;
+  font-weight:900 !important;
+}
+
+.cm-exame-view-body{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  padding:14px 18px 18px !important;
+  background:#f8fafc !important;
+  overflow:hidden !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+
+.cm-exame-toolbar{
+  flex:0 0 auto !important;
+  display:flex !important;
+  justify-content:flex-end !important;
+  gap:8px !important;
+  margin-bottom:10px !important;
+}
+
+.cm-exame-frame-wrap{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  background:#fff !important;
+  border:1px solid #dbe4ee !important;
+  border-radius:14px !important;
+  overflow:hidden !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.cm-exame-frame{
+  width:100% !important;
+  height:100% !important;
+  border:0 !important;
+  background:#fff !important;
+}
+
+.cm-exame-img{
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  display:block !important;
+  margin:auto !important;
+}
+
+@media(max-width:760px){
+  .cm-exame-view-backdrop{padding:8px !important}
+  .cm-exame-view-modal{width:98vw !important;height:96vh !important;border-radius:14px !important}
+  .cm-exame-view-header{padding:12px 14px !important}
+  .cm-exame-view-body{padding:10px !important}
+}
+
+
+
+/* =========================================================
+   ZERO V2.0 — MODAIS CADASTRO PACIENTE / PROFISSIONAL
+========================================================= */
+.cm-section{
+  border:1px solid #e8eaf0;
+  background:#fff;
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:14px;
+}
+
+.cm-section-title{
+  font-weight:900;
+  color:#1a56db;
+  margin:0 0 12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:15px;
+}
+
+.cm-form-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.cm-form-grid .span-2{grid-column:span 2}
+.cm-form-grid .span-3{grid-column:span 3}
+.cm-form-grid .span-4{grid-column:1/-1}
+
+.cm-view-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+
+.cm-view-item{
+  border:1px solid #e2e8f0;
+  background:#f8fafc;
+  border-radius:12px;
+  padding:10px 12px;
+  min-height:58px;
+}
+
+.cm-view-item strong{
+  display:block;
+  font-size:12px;
+  color:#64748b;
+  margin-bottom:3px;
+}
+
+.cm-view-item span{
+  font-weight:800;
+  color:#0f172a;
+}
+
+.status-inativo{
+  background:#fee2e2 !important;
+  color:#991b1b !important;
+}
+
+.status-ativo{
+  background:#dcfce7 !important;
+  color:#166534 !important;
+}
+
+@media(max-width:900px){
+  .cm-form-grid,.cm-view-grid{grid-template-columns:1fr}
+  .cm-form-grid .span-2,.cm-form-grid .span-3,.cm-form-grid .span-4{grid-column:1/-1}
+}
+
+
+
+/* =========================================================
+   ZERO V2.2 — HISTÓRICO E SINAIS VITAIS
+========================================================= */
+.vitais-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+
+.vital-mini{
+  border:1px solid #e2e8f0;
+  background:#f8fafc;
+  border-radius:12px;
+  padding:9px 10px;
+}
+
+.vital-mini strong{
+  display:block;
+  font-size:11px;
+  color:#64748b;
+  margin-bottom:3px;
+}
+
+.vital-mini span{
+  font-weight:900;
+  color:#0f172a;
+}
+
+.hist-card{
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(15,23,42,.05);
+  padding:16px;
+  margin-bottom:14px;
+}
+
+.hist-head{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:flex-start;
+  margin-bottom:10px;
+}
+
+.hist-title{
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.hist-medico{
+  font-size:13px;
+  color:#0f172a;
+  white-space:nowrap;
+}
+
+.hist-block{
+  margin:8px 0;
+  line-height:1.55;
+}
+
+.hist-block strong{
+  color:#0f172a;
+}
+
+.hist-doc{
+  border:1px solid #e2e8f0;
+  background:#fff;
+  border-radius:14px;
+  padding:11px 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-top:9px;
+}
+
+.hist-doc-main{
+  min-width:0;
+}
+
+.hist-doc-title{
+  font-weight:900;
+  color:#0f172a;
+}
+
+.hist-doc-sub{
+  font-size:12px;
+  color:#64748b;
+  margin-top:3px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:520px;
+}
+
+@media(max-width:900px){
+  .vitais-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hist-head{display:block}
+  .hist-medico{margin-top:5px}
+  .hist-doc{display:block}
+  .hist-doc .doc-actions{margin-top:8px}
+}
+
+
+
+/* =========================================================
+   ZERO V2.3 — PRONTUÁRIO: HISTÓRICO E SINAIS VITAIS
+========================================================= */
+.pront-menu{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.pront-menu button{
+  border:1px solid #dbe4ee;
+  background:#fff;
+  color:#334155;
+  border-radius:999px;
+  padding:9px 13px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.pront-menu button.active{
+  background:#1a56db;
+  border-color:#1a56db;
+  color:#fff;
+}
+
+.hist-original-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  padding:14px 16px;
+  margin-bottom:12px;
+}
+
+.hist-original-head{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:flex-start;
+  margin-bottom:8px;
+}
+
+.hist-original-title{
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.hist-original-medico{
+  color:#0f172a;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.hist-original-line{
+  margin:3px 0;
+  line-height:1.45;
+  color:#0f172a;
+}
+
+.hist-original-line strong{
+  font-weight:1000;
+}
+
+.hist-original-docs{
+  margin-top:10px;
+  display:grid;
+  gap:8px;
+}
+
+.hist-original-doc{
+  border:1px solid #e2e8f0;
+  background:#fff;
+  border-radius:12px;
+  padding:9px 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.hist-original-doc-title{
+  font-weight:900;
+  color:#0f172a;
+}
+
+.hist-original-doc-sub{
+  font-size:12px;
+  color:#64748b;
+  margin-top:2px;
+  max-width:560px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.sinais-page-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin-top:10px;
+}
+
+.sinais-page-card{
+  border:1px solid #dbe4ee;
+  background:#f8fafc;
+  border-radius:12px;
+  padding:10px;
+}
+
+.sinais-page-card strong{
+  display:block;
+  color:#64748b;
+  font-size:12px;
+  margin-bottom:3px;
+}
+
+.sinais-page-card span{
+  color:#0f172a;
+  font-weight:1000;
+  font-size:16px;
+}
+
+.sinais-empty{
+  color:#64748b;
+  font-size:13px;
+  margin-top:8px;
+}
+
+@media(max-width:900px){
+  .hist-original-head{display:block}
+  .hist-original-medico{margin-top:5px}
+  .hist-original-doc{display:block}
+  .hist-original-doc .doc-actions{margin-top:8px}
+  .sinais-page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+
+
+/* =========================================================
+   ZERO V2.4 — PRONTUÁRIO ORIGINAL: HISTÓRICO + SINAIS
+========================================================= */
+.timeline-empty{
+  background:#fff;
+  border:1px dashed #cbd5e1;
+  border-radius:18px;
+  padding:42px 24px;
+  text-align:center;
+  color:#64748b;
+}
+
+.timeline-empty .ico{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.timeline-empty strong{
+  display:block;
+  font-size:18px;
+  color:#0f172a;
+  margin-bottom:6px;
+}
+
+.timeline-wrap{
+  position:relative;
+  margin-left:12px;
+  padding-left:22px;
+}
+
+.timeline-wrap:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:4px;
+  bottom:4px;
+  width:3px;
+  border-radius:999px;
+  background:#dbe4ee;
+}
+
+.timeline-item{
+  position:relative;
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:14px 16px;
+  margin-bottom:14px;
+  box-shadow:0 8px 24px rgba(15,23,42,.05);
+}
+
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:-30px;
+  top:19px;
+  width:14px;
+  height:14px;
+  border-radius:999px;
+  background:#1a56db;
+  border:3px solid #fff;
+  box-shadow:0 0 0 2px #bfdbfe;
+}
+
+.timeline-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.timeline-title{
+  font-weight:1000;
+  color:#0f172a;
+  font-size:16px;
+}
+
+.timeline-meta{
+  color:#64748b;
+  font-size:13px;
+  margin-top:3px;
+}
+
+.timeline-status{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  border-radius:999px;
+  background:#dcfce7;
+  color:#166534;
+  font-size:12px;
+  font-weight:900;
+  padding:5px 9px;
+  margin-top:8px;
+}
+
+.timeline-actions{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+}
+
+.anamnese-detail-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.anamnese-block{
+  border:1px solid #e2e8f0;
+  background:#f8fafc;
+  border-radius:14px;
+  padding:13px;
+  line-height:1.6;
+}
+
+.anamnese-block.full{
+  grid-column:1/-1;
+}
+
+.anamnese-block strong{
+  display:block;
+  color:#0f172a;
+  margin-bottom:6px;
+}
+
+.sv-form-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+
+.sv-last-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.sv-card{
+  border:1px solid #dbe4ee;
+  background:#fff;
+  border-radius:16px;
+  padding:14px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.sv-card .label{
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:5px;
+}
+
+.sv-card .value{
+  font-size:21px;
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.sv-card .unit{
+  color:#64748b;
+  font-size:12px;
+  margin-left:3px;
+}
+
+.sv-table-wrap{
+  overflow:auto;
+}
+
+.sv-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:980px;
+}
+
+.sv-table th,
+.sv-table td{
+  border-bottom:1px solid #e2e8f0;
+  padding:10px 9px;
+  text-align:left;
+  white-space:nowrap;
+}
+
+.sv-table th{
+  color:#64748b;
+  font-size:12px;
+  text-transform:uppercase;
+  background:#f8fafc;
+}
+
+.sv-table td{
+  color:#0f172a;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+  .timeline-head{display:block}
+  .timeline-actions{justify-content:flex-start;margin-top:10px}
+  .anamnese-detail-grid{grid-template-columns:1fr}
+  .sv-last-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+
+
+/* =========================================================
+   ZERO V2.5 — HISTÓRICO LIMPO IGUAL ORIGINAL
+========================================================= */
+.hist-clean-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  padding:14px 16px;
+  margin-bottom:12px;
+}
+
+.hist-clean-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:8px;
+}
+
+.hist-clean-title{
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.hist-clean-medico{
+  color:#0f172a;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.hist-clean-line{
+  margin:3px 0;
+  line-height:1.45;
+  color:#0f172a;
+}
+
+.hist-clean-line strong{
+  font-weight:1000;
+}
+
+.hist-clean-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+@media(max-width:900px){
+  .hist-clean-head{display:block}
+  .hist-clean-medico{margin-top:5px}
+  .hist-clean-actions{justify-content:flex-start}
+}
+
+
+
+/* =========================================================
+   ZERO V2.6 — HISTÓRICO SOMENTE CONSULTA / DATA / PROFISSIONAL
+========================================================= */
+.hist-consulta-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  padding:14px 16px;
+  margin-bottom:12px;
+}
+
+.hist-consulta-head{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:center;
+}
+
+.hist-consulta-main{
+  min-width:0;
+}
+
+.hist-consulta-title{
+  font-weight:1000;
+  color:#0f172a;
+  font-size:15px;
+}
+
+.hist-consulta-meta{
+  color:#64748b;
+  font-size:13px;
+  margin-top:4px;
+}
+
+.hist-consulta-actions{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+}
+
+@media(max-width:900px){
+  .hist-consulta-head{display:block}
+  .hist-consulta-actions{justify-content:flex-start;margin-top:10px}
+}
+
+
+
+/* =========================================================
+   ZERO V2.7 — INÍCIO ORIGINAL + FILA/ATENDIMENTO
+========================================================= */
+.home-kpis{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-bottom:16px;
+}
+
+.home-kpi{
+  background:#fff;
+  border:1px solid #e8eaf0;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.home-kpi-ico{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,rgba(26,86,219,.12),rgba(14,159,110,.10));
+  font-size:22px;
+}
+
+.home-kpi-label{
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.home-kpi-value{
+  color:#0f172a;
+  font-size:26px;
+  font-weight:1000;
+  line-height:1;
+  margin-top:4px;
+}
+
+.home-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:16px;
+}
+
+.home-panel{
+  background:#fff;
+  border:1px solid #e8eaf0;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.home-panel-title{
+  font-weight:1000;
+  color:#0f172a;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.fila-status{
+  display:inline-flex;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:900;
+}
+
+.fila-aguardando{background:#fef3c7;color:#92400e}
+.fila-em-atendimento{background:#dbeafe;color:#1d4ed8}
+.fila-finalizado{background:#dcfce7;color:#166534}
+
+.quick-patient-list{
+  max-height:420px;
+  overflow:auto;
+  border:1px solid #e8eaf0;
+  border-radius:14px;
+}
+
+.quick-patient-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-bottom:1px solid #edf2f7;
+}
+
+.quick-patient-row:last-child{border-bottom:0}
+
+.registro-bloqueado{
+  border:1px dashed #cbd5e1;
+  background:#f8fafc;
+  border-radius:16px;
+  padding:20px;
+  color:#64748b;
+  text-align:center;
+}
+
+@media(max-width:980px){
+  .home-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .home-kpis{grid-template-columns:1fr}
+  .quick-patient-row{display:block}
+  .quick-patient-row .row{margin-top:8px}
+}
+
+
+
+/* =========================================================
+   ZERO V2.8 — INÍCIO COMO ORIGINAL
+========================================================= */
+.inicio-original-wrap{
+  display:grid;
+  gap:16px;
+}
+
+.inicio-original-cards{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+
+.inicio-original-card{
+  background:#fff;
+  border:1px solid #e8eaf0;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.inicio-original-icon{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  background:linear-gradient(135deg,rgba(26,86,219,.12),rgba(14,159,110,.10));
+}
+
+.inicio-original-num{
+  font-size:28px;
+  font-weight:1000;
+  color:#0f172a;
+  line-height:1;
+}
+
+.inicio-original-label{
+  font-size:12px;
+  color:#64748b;
+  font-weight:900;
+  text-transform:uppercase;
+  margin-top:4px;
+}
+
+.inicio-panel{
+  background:#fff;
+  border:1px solid #e8eaf0;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.inicio-panel-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.inicio-panel-title{
+  font-weight:1000;
+  color:#0f172a;
+  font-size:17px;
+}
+
+.inicio-empty{
+  padding:18px;
+  color:#64748b;
+  background:#f8fafc;
+  border-radius:12px;
+  border:1px dashed #cbd5e1;
+  text-align:center;
+}
+
+.atendido-row-click{
+  cursor:pointer;
+}
+
+.atendido-row-click:hover{
+  background:#f8fafc;
+}
+
+.hist-dia-box{
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:12px;
+  margin:8px 0 12px;
+}
+
+.hist-dia-title{
+  font-weight:1000;
+  color:#0f172a;
+  margin-bottom:8px;
+}
+
+.hist-dia-item{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:10px;
+  margin-top:8px;
+}
+
+@media(max-width:900px){
+  .inicio-original-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .inicio-panel-head{display:block}
+  .inicio-panel-head .row{margin-top:10px}
+}
+@media(max-width:560px){
+  .inicio-original-cards{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V2.9 — INÍCIO + FILA IGUAL ORIGINAL
+========================================================= */
+.zero-page-title{
+  font-size:28px;
+  font-weight:1000;
+  color:#020617;
+  margin:0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.zero-page-sub{
+  color:#425b7c;
+  margin:4px 0 26px;
+  font-size:15px;
+}
+
+.zero-kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:16px;
+  margin-bottom:18px;
+}
+
+.zero-kpi-card{
+  background:#fff;
+  border:1px solid #dfe7f1;
+  border-radius:15px;
+  min-height:110px;
+  padding:22px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 8px 20px rgba(15,23,42,.04);
+}
+
+.zero-kpi-card.small-row{
+  max-width:246px;
+}
+
+.zero-kpi-ico{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-size:24px;
+  flex:0 0 auto;
+}
+
+.zero-kpi-ico.blue{background:#eef2ff}
+.zero-kpi-ico.green{background:#e9fbef}
+.zero-kpi-ico.orange{background:#fff3e8}
+.zero-kpi-ico.yellow{background:#fff9d8}
+.zero-kpi-ico.purple{background:#f2edff}
+.zero-kpi-ico.red{background:#fff1f2}
+
+.zero-kpi-num{
+  font-size:30px;
+  line-height:1;
+  font-weight:1000;
+  color:#020617;
+}
+
+.zero-kpi-label{
+  font-size:13px;
+  color:#425b7c;
+  margin-top:4px;
+  font-weight:700;
+}
+
+.zero-kpi-trend{
+  font-size:12px;
+  color:#16a34a;
+  font-weight:900;
+  margin-top:4px;
+}
+
+.zero-home-lower{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:26px;
+}
+
+.zero-panel{
+  background:#fff;
+  border:1px solid #dfe7f1;
+  border-radius:16px;
+  min-height:140px;
+  box-shadow:0 8px 20px rgba(15,23,42,.04);
+  overflow:hidden;
+}
+
+.zero-panel-head{
+  padding:20px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.zero-panel-title{
+  font-size:18px;
+  font-weight:1000;
+  color:#020617;
+}
+
+.zero-panel-body{
+  min-height:86px;
+  padding:10px 22px 24px;
+}
+
+.zero-muted-center{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#9ca3af;
+  font-size:14px;
+}
+
+.zero-link{
+  border:0;
+  background:transparent;
+  color:#1d4ed8;
+  font-weight:900;
+  cursor:pointer;
+  padding:6px 0;
+}
+
+.zero-fila-kpis{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(180px, 198px));
+  gap:22px;
+  margin:26px 0 18px;
+}
+
+.zero-fila-box{
+  background:#fff;
+  border:1px solid #dfe7f1;
+  border-radius:15px;
+  min-height:110px;
+  padding:22px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 8px 20px rgba(15,23,42,.04);
+}
+
+.zero-wide-panel{
+  background:#fff;
+  border:1px solid #dfe7f1;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(15,23,42,.04);
+  overflow:hidden;
+  margin-top:20px;
+}
+
+.zero-wide-head{
+  height:80px;
+  padding:0 36px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #edf2f7;
+}
+
+.zero-wide-title{
+  font-weight:1000;
+  color:#020617;
+  font-size:17px;
+}
+
+.zero-wide-body{
+  min-height:94px;
+  padding:28px 36px;
+}
+
+.zero-empty-strong{
+  color:#020617;
+  font-weight:1000;
+  text-align:center;
+  padding:10px;
+}
+
+.zero-pill-btn{
+  border:0;
+  background:#2563eb;
+  color:#fff;
+  border-radius:999px;
+  padding:8px 14px;
+  font-weight:1000;
+  cursor:pointer;
+}
+
+.zero-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.zero-table th,
+.zero-table td{
+  border-bottom:1px solid #edf2f7;
+  padding:11px 8px;
+  text-align:left;
+}
+
+.zero-table th{
+  color:#64748b;
+  font-size:12px;
+  text-transform:uppercase;
+}
+
+.zero-atendido-click{
+  cursor:pointer;
+}
+
+.zero-atendido-click:hover{
+  background:#f8fafc;
+}
+
+@media(max-width:1100px){
+  .zero-kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .zero-home-lower{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .zero-kpi-grid,.zero-fila-kpis{grid-template-columns:1fr}
+  .zero-kpi-card.small-row{max-width:none}
+  .zero-wide-head{height:auto;padding:18px;display:block}
+  .zero-wide-head .row{margin-top:10px}
+  .zero-wide-body{padding:18px}
+}
+
+
+
+/* =========================================================
+   ZERO V3.0 — CARDS INÍCIO MENORES + PERFIS PROFISSIONAIS
+========================================================= */
+.zero-kpi-num{
+  font-size:24px !important;
+  line-height:1.05 !important;
+  white-space:nowrap !important;
+  max-width:145px !important;
+  overflow:hidden !important;
+  text-overflow:ellipsis !important;
+}
+
+.zero-kpi-label{
+  font-size:12px !important;
+}
+
+.zero-kpi-card{
+  min-height:100px !important;
+  padding:18px !important;
+}
+
+.zero-kpi-ico{
+  width:48px !important;
+  height:48px !important;
+  font-size:21px !important;
+}
+
+.zero-fila-box .zero-kpi-num,
+.zero-kpi-card.small-row .zero-kpi-num{
+  font-size:24px !important;
+}
+
+.perfil-pill{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:900;
+  background:#eef2ff;
+  color:#1d4ed8;
+}
+
+.login-pill{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:900;
+  background:#dcfce7;
+  color:#166534;
+}
+
+
+
+/* =========================================================
+   ZERO V3.2 — MENUS LOGS/AUDITORIA E SUPABASE
+========================================================= */
+.audit-toolbar,
+.supabase-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.audit-filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.audit-filters input,
+.audit-filters select{
+  width:auto;
+  min-width:180px;
+}
+
+.audit-log-row{
+  cursor:pointer;
+}
+
+.audit-log-row:hover{
+  background:#f8fafc;
+}
+
+.audit-action-badge{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:12px;
+  font-weight:900;
+  background:#eef2ff;
+  color:#1d4ed8;
+}
+
+.audit-action-badge.danger{
+  background:#fee2e2;
+  color:#991b1b;
+}
+
+.audit-action-badge.success{
+  background:#dcfce7;
+  color:#166534;
+}
+
+.supabase-status{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:13px;
+  font-weight:900;
+}
+
+.supabase-on{
+  background:#dcfce7;
+  color:#166534;
+}
+
+.supabase-off{
+  background:#fee2e2;
+  color:#991b1b;
+}
+
+.supabase-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.supabase-code{
+  background:#0f172a;
+  color:#e2e8f0;
+  border-radius:14px;
+  padding:14px;
+  white-space:pre-wrap;
+  overflow:auto;
+  font-family:Consolas,monospace;
+  font-size:12px;
+  line-height:1.55;
+  max-height:420px;
+}
+
+@media(max-width:900px){
+  .supabase-grid{grid-template-columns:1fr}
+  .audit-filters input,
+  .audit-filters select{width:100%}
+}
+
+
+
+/* =========================================================
+   ZERO V3.3 — MODAL REGISTRAR CONSULTA ORIGINAL
+========================================================= */
+.rc-original .patient-top{
+  margin-bottom:14px;
+}
+
+.rc-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.rc-col{
+  min-width:0;
+}
+
+.rc-full{
+  grid-column:1/-1;
+}
+
+.rc-section{
+  grid-column:1/-1;
+  margin-top:12px;
+  padding:10px 12px;
+  background:#eef6ff;
+  border-left:4px solid #1a56db;
+  border-radius:10px;
+  font-weight:1000;
+  color:#1e3a8a;
+}
+
+.rc-help{
+  font-size:12px;
+  color:#64748b;
+  margin-top:4px;
+}
+
+.rc-check-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:7px;
+}
+
+.rc-check{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #e2e8f0;
+  background:#fff;
+  border-radius:10px;
+  padding:8px 10px;
+  font-size:13px;
+  font-weight:700;
+  color:#334155;
+  min-height:40px;
+}
+
+.rc-check input{
+  width:auto;
+}
+
+.rc-radio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:8px;
+  margin-top:7px;
+}
+
+.rc-radio{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #e2e8f0;
+  background:#fff;
+  border-radius:10px;
+  padding:8px 10px;
+  font-size:13px;
+  font-weight:800;
+  color:#334155;
+}
+
+.rc-radio input{
+  width:auto;
+}
+
+.rc-med-row{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr auto;
+  gap:8px;
+  margin-bottom:8px;
+  align-items:center;
+}
+
+.rc-docs-area{
+  border:1px solid #e2e8f0;
+  background:#f8fafc;
+  border-radius:14px;
+  padding:12px;
+}
+
+.rc-proc-alert{
+  background:#f8fafc;
+  border:1px solid #dbeafe;
+  border-radius:10px;
+  padding:10px 12px;
+  color:#334155;
+  font-size:13px;
+  margin-bottom:8px;
+}
+
+.rc-original textarea{
+  min-height:74px;
+}
+
+.rc-original #ana-exame-fisico{
+  min-height:150px;
+}
+
+.rc-original select,
+.rc-original input,
+.rc-original textarea{
+  font-size:14px;
+}
+
+.rc-last-vitals{
+  background:linear-gradient(135deg,#1a56db,#0e9f6e);
+  color:#fff;
+  border-radius:14px;
+  padding:12px;
+  grid-column:1/-1;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:13px;
+}
+
+.rc-last-vitals strong{
+  color:#fff;
+}
+
+@media(max-width:900px){
+  .rc-form-grid{grid-template-columns:1fr}
+  .rc-check-grid{grid-template-columns:1fr}
+  .rc-med-row{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V3.4 — EXAMES UPLOAD + MODAIS DOCUMENTOS ORIGINAL
+========================================================= */
+.doc-original-banner{
+  border-radius:8px;
+  padding:10px 14px;
+  margin-bottom:16px;
+  font-size:13px;
+}
+
+.doc-banner-green{background:#ecfdf5;color:#065f46}
+.doc-banner-blue{background:#eff6ff;color:#1e40af}
+.doc-banner-purple{background:#f5f3ff;color:#5b21b6}
+.doc-banner-cyan{background:#ecfeff;color:#155e75}
+
+.doc-med-list{
+  border:1px solid #dbeafe;
+  background:#f8fafc;
+  border-radius:12px;
+  padding:10px;
+  margin-bottom:14px;
+}
+
+.doc-med-item{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:10px;
+  margin-bottom:8px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.doc-med-title{
+  font-weight:900;
+  color:#0f172a;
+}
+
+.doc-med-sub{
+  font-size:12px;
+  color:#64748b;
+  margin-top:3px;
+}
+
+.exames-upload-original{
+  background:#fff;
+  border:2px dashed #93c5fd;
+  border-radius:16px;
+  padding:24px;
+  text-align:center;
+  cursor:pointer;
+  transition:.15s;
+}
+
+.exames-upload-original:hover{
+  background:#eff6ff;
+  border-color:#2563eb;
+}
+
+.exames-upload-icon{
+  font-size:42px;
+  margin-bottom:8px;
+}
+
+.exames-upload-title{
+  font-size:17px;
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.exames-upload-sub{
+  color:#64748b;
+  font-size:13px;
+  margin:5px 0 12px;
+}
+
+.rc-docs-area #docs-temp{
+  margin-top:10px;
+}
+
+
+
+/* =========================================================
+   ZERO V3.5 — RECEITA ORIGINAL + X NÃO FECHA REGISTRAR
+========================================================= */
+.receita-original-lista{
+  border:1px solid #dbeafe;
+  background:#f8fafc;
+  border-radius:12px;
+  padding:10px;
+  margin-bottom:18px;
+  min-height:58px;
+}
+
+.receita-original-empty{
+  color:#94a3b8;
+  text-align:center;
+  padding:18px;
+  font-size:13px;
+}
+
+.receita-original-med{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:9px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.receita-original-med:last-child{
+  margin-bottom:0;
+}
+
+.receita-original-med-title{
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.receita-original-med-sub{
+  color:#64748b;
+  font-size:12px;
+  margin-top:4px;
+  line-height:1.45;
+}
+
+.med-period-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+
+.med-period-option{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+  border-radius:12px;
+  padding:10px 12px;
+  cursor:pointer;
+  font-size:14px;
+  color:#1f2937;
+  font-weight:700;
+}
+
+.med-period-option input{
+  width:auto;
+}
+
+.med-period-option:has(input:checked){
+  background:#eff6ff;
+  border-color:#93c5fd;
+}
+
+.med-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.med-form-grid .full{
+  grid-column:1/-1;
+}
+
+@media(max-width:760px){
+  .med-period-grid,.med-form-grid{grid-template-columns:1fr}
+  .receita-original-med{display:block}
+  .receita-original-med .doc-actions{margin-top:8px}
+}
+
+
+
+/* =========================================================
+   ZERO V3.6 — MODAIS DOCUMENTOS PADRÃO ORIGINAL
+========================================================= */
+.doc-modal-original label{
+  font-weight:900;
+  color:#334155;
+  font-size:14px;
+}
+
+.doc-modal-original input,
+.doc-modal-original textarea,
+.doc-modal-original select{
+  border:1px solid #cfe0f5;
+  border-radius:14px;
+  padding:11px 13px;
+  background:#fff;
+}
+
+.doc-modal-original textarea{
+  min-height:78px;
+}
+
+.med-period-line{
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+  border-radius:14px;
+  padding:12px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.med-period-current{
+  font-weight:1000;
+  color:#334155;
+  font-size:17px;
+}
+
+.med-select-btn{
+  border:1px solid #9db9ff;
+  background:#fff;
+  color:#1d4ed8;
+  border-radius:999px;
+  padding:7px 15px;
+  font-weight:1000;
+  cursor:pointer;
+}
+
+.period-modal-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+}
+
+.period-modal-opt{
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+  border-radius:12px;
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.period-modal-opt input{width:auto}
+
+.doc-original-footer{
+  border-top:1px solid #e5e7eb;
+  margin-top:20px;
+  padding-top:18px;
+}
+
+@media(max-width:760px){
+  .period-modal-grid{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V3.8 — LOGOUT ORIGINAL
+========================================================= */
+.cm-logout-area{
+  margin-top:auto;
+  padding-top:12px;
+  border-top:1px solid rgba(148,163,184,.22);
+}
+
+.cm-logout-btn{
+  width:100%;
+  border:0;
+  background:#fee2e2 !important;
+  color:#991b1b !important;
+  border-radius:12px;
+  padding:11px 12px;
+  font-weight:1000;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+}
+
+.cm-logout-btn:hover{
+  background:#fecaca !important;
+}
+
+.sidebar.collapsed .cm-logout-btn span,
+.cm-sidebar.collapsed .cm-logout-btn span{
+  display:none;
+}
+
+.sidebar.collapsed .cm-logout-btn,
+.cm-sidebar.collapsed .cm-logout-btn{
+  justify-content:center;
+  padding-left:0;
+  padding-right:0;
+}
+
+
+
+/* =========================================================
+   ZERO V3.9 — SAIR NO FINAL DO MENU + REGISTRAR/PACIENTE
+========================================================= */
+.sidebar,
+.cm-sidebar,
+aside.sidebar,
+aside.cm-sidebar{
+  min-height:100vh !important;
+}
+
+.sidebar nav,
+.cm-sidebar nav,
+nav.sidebar-nav,
+.nav{
+  display:flex !important;
+  flex-direction:column !important;
+  min-height:calc(100vh - 120px) !important;
+}
+
+.cm-logout-area{
+  margin-top:auto !important;
+  padding-top:12px !important;
+  padding-bottom:12px !important;
+  border-top:1px solid rgba(148,163,184,.22) !important;
+}
+
+.cm-logout-btn{
+  width:100% !important;
+}
+
+.prontuario-top-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+@media(max-width:760px){
+  .prontuario-top-actions{
+    justify-content:flex-start;
+    margin-top:10px;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V4.0 — AUDITORIA SISTEMA + REMOVER BOTÃO REGISTRAR
+========================================================= */
+.audit-system-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-bottom:16px;
+}
+
+.audit-system-card{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.audit-system-card .label{
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.audit-system-card .value{
+  color:#0f172a;
+  font-size:26px;
+  font-weight:1000;
+  margin-top:4px;
+}
+
+.audit-system-list{
+  display:grid;
+  gap:10px;
+}
+
+.audit-system-item{
+  border:1px solid #e2e8f0;
+  background:#fff;
+  border-radius:14px;
+  padding:12px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.audit-system-ok{
+  color:#166534;
+  background:#dcfce7;
+  border-radius:999px;
+  padding:5px 10px;
+  font-weight:1000;
+  font-size:12px;
+}
+
+.audit-system-alert{
+  color:#991b1b;
+  background:#fee2e2;
+  border-radius:999px;
+  padding:5px 10px;
+  font-weight:1000;
+  font-size:12px;
+}
+
+.audit-system-warn{
+  color:#92400e;
+  background:#fef3c7;
+  border-radius:999px;
+  padding:5px 10px;
+  font-weight:1000;
+  font-size:12px;
+}
+
+@media(max-width:900px){
+  .audit-system-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .audit-system-item{display:block}
+  .audit-system-item span{display:inline-flex;margin-top:8px}
+}
+@media(max-width:560px){
+  .audit-system-grid{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V4.1 — PACIENTE COMPLETO + FLUXO ATENDIMENTO
+========================================================= */
+.paciente-completo-actions{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.paciente-completo-card{
+  border:1px solid #dbe4ee;
+  background:#fff;
+  border-radius:14px;
+  padding:14px;
+  cursor:pointer;
+  transition:.15s;
+}
+
+.paciente-completo-card:hover{
+  background:#f8fafc;
+  border-color:#93c5fd;
+}
+
+.paciente-completo-card strong{
+  display:block;
+  color:#0f172a;
+  margin-bottom:4px;
+}
+
+.paciente-completo-card span{
+  color:#64748b;
+  font-size:12px;
+}
+
+.manter-fila-box{
+  border:1px solid #dbeafe;
+  background:#eff6ff;
+  border-radius:14px;
+  padding:14px;
+}
+
+@media(max-width:760px){
+  .paciente-completo-actions{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V4.2 — PACIENTES: REGISTRO COMPLETO ORIGINAL
+========================================================= */
+.btn-registro-completo{
+  background:#0f766e !important;
+  color:#fff !important;
+  border-color:#0f766e !important;
+}
+
+.btn-registro-completo:hover{
+  background:#115e59 !important;
+}
+
+.pac-reg-actions{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.pac-top-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+@media(max-width:900px){
+  .pac-reg-actions,.pac-top-actions{justify-content:flex-start}
+}
+
+
+
+/* =========================================================
+   ZERO V4.3 — PACIENTE COMPLETO ORIGINAL + IMPRIMIR PRONTUÁRIO
+========================================================= */
+.pront-original-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.pront-back{
+  border:0;
+  background:transparent;
+  color:#334155;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.pront-print-btn{
+  border:1px solid #9db9ff;
+  background:#fff;
+  color:#1d4ed8;
+  border-radius:999px;
+  padding:8px 16px;
+  font-weight:1000;
+  cursor:pointer;
+}
+
+.pront-patient-banner{
+  background:linear-gradient(120deg,#1d4ed8,#10b981);
+  color:#fff;
+  border-radius:0 0 24px 24px;
+  padding:26px 28px;
+  margin:0 0 18px;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+}
+
+.pront-avatar{
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.18);
+  font-size:23px;
+  font-weight:1000;
+  flex:0 0 auto;
+}
+
+.pront-info-main{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-width:0;
+}
+
+.pront-info-name{
+  font-size:23px;
+  font-weight:1000;
+}
+
+.pront-info-lines{
+  margin-top:4px;
+  line-height:1.55;
+  font-size:14px;
+}
+
+.pront-vitals-card{
+  background:rgba(255,255,255,.18);
+  border-radius:12px;
+  padding:12px 16px;
+  min-width:185px;
+  font-size:13px;
+  line-height:1.45;
+}
+
+.pront-vitals-card strong{
+  color:#fff;
+}
+
+.paciente-completo-modal-section{
+  border-top:1px solid #e5e7eb;
+  padding-top:12px;
+  margin-top:14px;
+}
+
+.paciente-completo-big-btn{
+  width:100%;
+  border:0;
+  border-radius:14px;
+  padding:14px 16px;
+  font-weight:1000;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.paciente-completo-export{
+  background:#255be8;
+  color:#fff;
+}
+
+.paciente-completo-import{
+  background:#079669;
+  color:#fff;
+}
+
+@media(max-width:900px){
+  .pront-patient-banner{display:block}
+  .pront-vitals-card{margin-top:14px}
+  .pront-original-head{display:block}
+  .pront-original-head .row{margin-top:10px}
+}
+
+
+
+/* =========================================================
+   ZERO V4.4 — CABEÇALHO ORIGINAL NAS IMPRESSÕES
+========================================================= */
+.btn-registro-completo{
+  display:none !important;
+}
+
+
+
+/* =========================================================
+   ZERO V4.6 — CONFIGURAÇÕES CABEÇALHO
+========================================================= */
+.config-logo-preview{
+  width:72px;
+  height:72px;
+  border-radius:12px;
+  background:#222;
+  object-fit:cover;
+  display:block;
+  margin-top:8px;
+}
+.config-help{
+  color:#64748b;
+  font-size:12px;
+  margin-top:5px;
+}
+
+
+
+/* =========================================================
+   ZERO V4.8 — BACKUP / IMPORTAÇÃO IGUAL ORIGINAL
+========================================================= */
+.backup-original-wrap{
+  display:grid;
+  gap:16px;
+}
+
+.backup-original-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:18px 20px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.backup-original-title{
+  font-size:18px;
+  font-weight:1000;
+  color:#111827;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.backup-original-desc{
+  color:#64748b;
+  line-height:1.55;
+  margin-bottom:12px;
+  font-size:14px;
+}
+
+.backup-modulos-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px 22px;
+  margin-top:8px;
+}
+
+.backup-check{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#334155;
+  font-size:14px;
+}
+
+.backup-check input{
+  width:auto;
+}
+
+.backup-radio-line{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  margin:8px 0;
+}
+
+.backup-radio-line input{
+  width:auto;
+  margin-top:3px;
+}
+
+.backup-radio-line strong{
+  color:#334155;
+}
+
+.backup-danger{
+  color:#991b1b;
+}
+
+.backup-recommend{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:4px 8px;
+  background:#dcfce7;
+  color:#166534;
+  font-size:12px;
+  font-weight:1000;
+  margin-left:6px;
+}
+
+.backup-original-section-toggle{
+  font-weight:1000;
+  color:#334155;
+  margin:12px 0 6px;
+}
+
+.backup-hidden-input{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  .backup-modulos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .backup-modulos-grid{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V4.9 — MENU LATERAL FIXO IGUAL ORIGINAL
+   A página rola sozinha. O menu só rola se os itens passarem da tela.
+========================================================= */
+html,
+body{
+  height:100% !important;
+}
+
+body{
+  overflow:hidden !important;
+}
+
+#app,
+.app,
+.layout,
+.app-shell,
+.main-layout{
+  height:100vh !important;
+  min-height:100vh !important;
+  overflow:hidden !important;
+}
+
+.sidebar,
+.cm-sidebar,
+aside.sidebar,
+aside.cm-sidebar,
+#sidebar{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow:hidden !important;
+  position:sticky !important;
+  top:0 !important;
+  align-self:flex-start !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+
+.sidebar nav,
+.cm-sidebar nav,
+#sidebar nav,
+.nav,
+.sidebar .nav,
+.cm-sidebar .nav{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  padding-right:4px !important;
+  scrollbar-width:thin !important;
+}
+
+.sidebar nav::-webkit-scrollbar,
+.cm-sidebar nav::-webkit-scrollbar,
+#sidebar nav::-webkit-scrollbar,
+.nav::-webkit-scrollbar{
+  width:6px;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb,
+.cm-sidebar nav::-webkit-scrollbar-thumb,
+#sidebar nav::-webkit-scrollbar-thumb,
+.nav::-webkit-scrollbar-thumb{
+  background:#cbd5e1;
+  border-radius:999px;
+}
+
+.cm-logout-area{
+  flex:0 0 auto !important;
+  margin-top:0 !important;
+}
+
+.content,
+.main,
+main,
+#content,
+.page-content{
+  min-height:0 !important;
+}
+
+main,
+.main,
+.content-wrap,
+#main,
+.app-content{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+}
+
+/* Compatibilidade com layouts que usam grid/flex */
+body > #app{
+  display:flex !important;
+}
+
+body > #app > main,
+body > #app > .main,
+body > #app > .content-wrap{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+/* Em telas pequenas, deixa o comportamento natural */
+@media(max-width:760px){
+  body{
+    overflow:auto !important;
+  }
+
+  #app,
+  .app,
+  .layout,
+  .app-shell,
+  .main-layout{
+    height:auto !important;
+    min-height:100vh !important;
+    overflow:visible !important;
+  }
+
+  .sidebar,
+  .cm-sidebar,
+  aside.sidebar,
+  aside.cm-sidebar,
+  #sidebar{
+    position:relative !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+
+  main,
+  .main,
+  .content-wrap,
+  #main,
+  .app-content{
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V5.0 — REMOVER LOGO REALMENTE
+========================================================= */
+.config-logo-empty{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:72px;
+  height:72px;
+  border-radius:12px;
+  background:#f1f5f9;
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  margin-top:8px;
+  border:1px dashed #cbd5e1;
+}
+
+
+
+/* =========================================================
+   ZERO V5.2 — FINANCEIRO ORIGINAL
+========================================================= */
+.fin-toolbar{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.fin-tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:12px 0 16px;
+}
+.fin-tabs button{
+  border:1px solid #dbe4ee;
+  background:#fff;
+  color:#334155;
+  border-radius:999px;
+  padding:9px 14px;
+  font-weight:1000;
+  cursor:pointer;
+}
+.fin-tabs button.active{
+  background:#1d4ed8;
+  border-color:#1d4ed8;
+  color:#fff;
+}
+.fin-kpis{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-bottom:16px;
+}
+.fin-kpi{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+.fin-kpi .label{
+  color:#64748b;
+  font-size:12px;
+  font-weight:1000;
+  text-transform:uppercase;
+}
+.fin-kpi .value{
+  color:#0f172a;
+  font-size:24px;
+  font-weight:1000;
+  margin-top:6px;
+}
+.fin-kpi.receita .value{color:#047857}
+.fin-kpi.despesa .value{color:#b91c1c}
+.fin-kpi.saldo .value{color:#1d4ed8}
+.fin-kpi.pendente .value{color:#92400e}
+.fin-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:16px;
+}
+.fin-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+.fin-card-title{
+  font-weight:1000;
+  color:#0f172a;
+  margin-bottom:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+}
+.fin-filter-row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.fin-filter-row input,.fin-filter-row select{
+  width:auto;
+  min-width:170px;
+}
+.fin-status{
+  display:inline-flex;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:12px;
+  font-weight:1000;
+}
+.fin-pago{background:#dcfce7;color:#166534}
+.fin-pendente{background:#fef3c7;color:#92400e}
+.fin-vencido{background:#fee2e2;color:#991b1b}
+.fin-receita{background:#dcfce7;color:#166534}
+.fin-despesa{background:#fee2e2;color:#991b1b}
+.fin-chart{
+  height:190px;
+  display:flex;
+  align-items:end;
+  gap:8px;
+  padding:10px 4px 0;
+  border-bottom:1px solid #e2e8f0;
+}
+.fin-bar-wrap{
+  flex:1;
+  min-width:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  height:100%;
+}
+.fin-bar{
+  width:100%;
+  max-width:34px;
+  border-radius:8px 8px 0 0;
+  background:#1d4ed8;
+  min-height:4px;
+}
+.fin-bar.despesa{background:#ef4444}
+.fin-bar-label{
+  font-size:10px;
+  color:#64748b;
+  margin-top:6px;
+}
+.fin-dre-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 0;
+  border-bottom:1px solid #edf2f7;
+}
+.fin-dre-row.total{
+  font-weight:1000;
+  font-size:16px;
+  color:#0f172a;
+  border-top:2px solid #dbe4ee;
+  margin-top:6px;
+}
+.fin-dre-row .neg{color:#b91c1c}
+.fin-dre-row .pos{color:#047857}
+.fin-empty{
+  padding:20px;
+  color:#94a3b8;
+  background:#f8fafc;
+  border:1px dashed #cbd5e1;
+  border-radius:14px;
+  text-align:center;
+}
+.fin-parcela-box{
+  border:1px solid #dbe4ee;
+  background:#f8fafc;
+  border-radius:14px;
+  padding:12px;
+  margin-top:10px;
+}
+@media(max-width:1000px){
+  .fin-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fin-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .fin-kpis{grid-template-columns:1fr}
+  .fin-filter-row input,.fin-filter-row select{width:100%}
+}
+
+
+
+/* =========================================================
+   ZERO V5.3 — AÇÕES NO FINAL DAS LINHAS IGUAL ORIGINAL
+========================================================= */
+.sv-table th:last-child,
+.sv-table td:last-child,
+.table th:last-child,
+.table td:last-child{
+  text-align:right !important;
+  white-space:nowrap !important;
+}
+
+.sv-table td:last-child .row,
+.table td:last-child .row,
+.fin-actions{
+  justify-content:flex-end !important;
+  display:flex !important;
+  gap:8px !important;
+  align-items:center !important;
+  flex-wrap:nowrap !important;
+}
+
+.fin-actions-col{
+  width:1% !important;
+  text-align:right !important;
+  white-space:nowrap !important;
+}
+
+.fin-categorias-table{
+  width:100% !important;
+  table-layout:auto !important;
+}
+
+.fin-categorias-table th:nth-child(1),
+.fin-categorias-table td:nth-child(1){
+  width:45% !important;
+}
+
+.fin-categorias-table th:nth-child(2),
+.fin-categorias-table td:nth-child(2){
+  width:25% !important;
+}
+
+.fin-categorias-table th:nth-child(3),
+.fin-categorias-table td:nth-child(3){
+  width:30% !important;
+  text-align:right !important;
+}
+
+@media(max-width:760px){
+  .fin-actions{
+    flex-wrap:wrap !important;
+    justify-content:flex-start !important;
+  }
+
+  .sv-table th:last-child,
+  .sv-table td:last-child,
+  .table th:last-child,
+  .table td:last-child{
+    text-align:left !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V5.4 — FINANCEIRO COM FINAL VISÍVEL IGUAL BACKUP
+   O conteúdo financeiro agora tem respiro no final e rolagem própria
+   para não ficar cortado no rodapé da tela.
+========================================================= */
+#financeiro-body{
+  padding-bottom:110px !important;
+}
+
+#financeiro-body .fin-card:last-child{
+  margin-bottom:90px !important;
+}
+
+.fin-toolbar{
+  margin-top:6px !important;
+}
+
+.fin-card{
+  overflow:visible !important;
+}
+
+.fin-dashboard-bottom-space{
+  height:70px;
+}
+
+/* Garante que a área principal role até o final real do conteúdo */
+main,
+.main,
+.content-wrap,
+#main,
+.app-content{
+  padding-bottom:0 !important;
+  scroll-padding-bottom:120px !important;
+}
+
+/* Evita que a última tabela fique escondida embaixo da barra inferior do navegador/sistema */
+.sv-table-wrap{
+  margin-bottom:12px;
+}
+
+/* Financeiro igual às demais telas: o último bloco sempre tem espaço visível */
+.fin-card + .fin-card{
+  margin-top:16px;
+}
+
+@media(max-width:760px){
+  #financeiro-body{
+    padding-bottom:140px !important;
+  }
+
+  #financeiro-body .fin-card:last-child{
+    margin-bottom:120px !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V5.5 — RESPIRO NO RODAPÉ EM TODOS OS MENUS
+   Todas as telas agora rolam até o final sem cortar conteúdo.
+========================================================= */
+
+/* Área principal com rolagem confortável */
+main,
+.main,
+.content-wrap,
+#main,
+.app-content{
+  scroll-padding-bottom:140px !important;
+}
+
+/* Conteúdo geral sempre com espaço inferior */
+#content{
+  padding-bottom:120px !important;
+}
+
+/* Último bloco/card de qualquer menu não encosta no rodapé */
+#content > *:last-child,
+#content .card:last-child,
+#content .fin-card:last-child,
+#content .backup-original-card:last-child{
+  margin-bottom:100px !important;
+}
+
+/* Telas com wrappers internos */
+#financeiro-body,
+.backup-original-wrap,
+.audit-system-list,
+.audit-log-list,
+.prontuario-content,
+.paciente-content{
+  padding-bottom:110px !important;
+}
+
+/* Tabelas e listas com espaço no final */
+.sv-table-wrap,
+.table-wrap,
+.grid,
+.lista,
+.cards-grid{
+  margin-bottom:18px;
+}
+
+/* Modais longos também ganham respiro embaixo */
+.modal-body{
+  padding-bottom:34px !important;
+}
+
+/* Evita que botões finais fiquem grudados no rodapé do modal */
+.modal-body > *:last-child{
+  margin-bottom:20px !important;
+}
+
+/* Rodapé de modal fica separado do conteúdo */
+.modal-footer{
+  border-top:1px solid #e5e7eb;
+  padding-top:14px !important;
+}
+
+/* Blocos específicos que estavam ficando colados */
+.fin-dashboard-bottom-space,
+.menu-bottom-space,
+.global-bottom-space{
+  height:90px !important;
+  flex:0 0 90px !important;
+}
+
+/* Mobile precisa de um pouco mais por causa da barra do navegador */
+@media(max-width:760px){
+  #content{
+    padding-bottom:160px !important;
+  }
+
+  #content > *:last-child,
+  #content .card:last-child,
+  #content .fin-card:last-child,
+  #content .backup-original-card:last-child{
+    margin-bottom:140px !important;
+  }
+
+  #financeiro-body,
+  .backup-original-wrap,
+  .audit-system-list,
+  .audit-log-list,
+  .prontuario-content,
+  .paciente-content{
+    padding-bottom:150px !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V5.6 — RELATÓRIOS ORIGINAL
+========================================================= */
+.rel-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.rel-tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:12px 0 16px;
+}
+.rel-tabs button{
+  border:1px solid #dbe4ee;
+  background:#fff;
+  color:#334155;
+  border-radius:999px;
+  padding:9px 14px;
+  font-weight:1000;
+  cursor:pointer;
+}
+.rel-tabs button.active{
+  background:#1d4ed8;
+  border-color:#1d4ed8;
+  color:#fff;
+}
+.rel-filtros{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:16px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:end;
+}
+.rel-filtros > div{
+  min-width:170px;
+}
+.rel-kpis{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-bottom:16px;
+}
+.rel-kpi{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+.rel-kpi .label{
+  color:#64748b;
+  font-size:12px;
+  font-weight:1000;
+  text-transform:uppercase;
+}
+.rel-kpi .value{
+  color:#0f172a;
+  font-size:24px;
+  font-weight:1000;
+  margin-top:6px;
+}
+.rel-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  margin-bottom:16px;
+}
+.rel-card-title{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  font-weight:1000;
+  color:#0f172a;
+  margin-bottom:12px;
+}
+.rel-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:16px;
+}
+.rel-chart{
+  height:220px;
+  display:flex;
+  align-items:end;
+  gap:8px;
+  padding:10px 4px 0;
+  border-bottom:1px solid #e2e8f0;
+}
+.rel-bar-wrap{
+  flex:1;
+  min-width:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  height:100%;
+}
+.rel-bar{
+  width:100%;
+  max-width:36px;
+  border-radius:8px 8px 0 0;
+  background:#1d4ed8;
+  min-height:4px;
+}
+.rel-bar.green{background:#059669}
+.rel-bar.red{background:#dc2626}
+.rel-bar.orange{background:#d97706}
+.rel-bar-label{
+  font-size:10px;
+  color:#64748b;
+  margin-top:6px;
+  text-align:center;
+}
+.rel-status{
+  display:inline-flex;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:12px;
+  font-weight:1000;
+}
+.rel-ok{background:#dcfce7;color:#166534}
+.rel-warn{background:#fef3c7;color:#92400e}
+.rel-danger{background:#fee2e2;color:#991b1b}
+.rel-info{background:#dbeafe;color:#1d4ed8}
+.rel-print-page{
+  font-family:Arial,Helvetica,sans-serif;
+}
+@media(max-width:1000px){
+  .rel-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rel-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .rel-kpis{grid-template-columns:1fr}
+  .rel-filtros > div{width:100%}
+}
+
+
+
+/* =========================================================
+   ZERO V5.7 — EXPORTAR FINANCEIRO PDF/CSV + FILTROS RELATÓRIOS
+========================================================= */
+.export-menu-inline{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.rel-filtros .rel-filter-wide{
+  min-width:210px;
+}
+.rel-filter-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border-radius:999px;
+  background:#eff6ff;
+  color:#1d4ed8;
+  font-size:12px;
+  font-weight:900;
+  padding:5px 9px;
+  margin:4px 4px 0 0;
+}
+@media(max-width:760px){
+  .export-menu-inline{width:100%}
+  .export-menu-inline button{flex:1}
+}
+
+
+
+/* =========================================================
+   ZERO V5.8 — RELATÓRIOS: FILTROS VISÍVEIS E SEM CORTE
+========================================================= */
+.rel-filtros{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(160px,1fr)) !important;
+  align-items:end !important;
+  overflow:visible !important;
+}
+
+.rel-filtros .rel-filter-actions{
+  grid-column:1/-1;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.rel-filtros > div{
+  min-width:0 !important;
+}
+
+.rel-filtros input,
+.rel-filtros select{
+  width:100% !important;
+}
+
+.rel-filtros button{
+  white-space:nowrap;
+}
+
+.rel-grid{
+  grid-template-columns:1fr !important;
+}
+
+.rel-card{
+  overflow:visible !important;
+}
+
+#relatorios-body{
+  padding-bottom:130px !important;
+}
+
+#relatorios-body .rel-card:last-child{
+  margin-bottom:110px !important;
+}
+
+.rel-table-wrap{
+  overflow:auto;
+  max-width:100%;
+}
+
+@media(max-width:1100px){
+  .rel-filtros{
+    grid-template-columns:repeat(3,minmax(160px,1fr)) !important;
+  }
+}
+
+@media(max-width:760px){
+  .rel-filtros{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V5.9 — AGENDA MÉDICA ORIGINAL
+========================================================= */
+.ag-toolbar{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.ag-tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:12px 0 16px;
+}
+.ag-tabs button{
+  border:1px solid #dbe4ee;
+  background:#fff;
+  color:#334155;
+  border-radius:999px;
+  padding:9px 14px;
+  font-weight:1000;
+  cursor:pointer;
+}
+.ag-tabs button.active{
+  background:#1d4ed8;
+  border-color:#1d4ed8;
+  color:#fff;
+}
+.ag-filtros{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:16px;
+  display:grid;
+  grid-template-columns:160px minmax(180px,1fr) minmax(180px,1fr) auto;
+  gap:10px;
+  align-items:end;
+}
+.ag-filtros input,.ag-filtros select{width:100%}
+.ag-kpis{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-bottom:16px;
+}
+.ag-kpi{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+.ag-kpi .label{
+  color:#64748b;
+  font-size:12px;
+  font-weight:1000;
+  text-transform:uppercase;
+}
+.ag-kpi .value{
+  color:#0f172a;
+  font-size:24px;
+  font-weight:1000;
+  margin-top:6px;
+}
+.ag-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  margin-bottom:16px;
+}
+.ag-card-title{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  font-weight:1000;
+  color:#0f172a;
+  margin-bottom:12px;
+}
+.ag-grid-dia{
+  display:grid;
+  grid-template-columns:92px 1fr;
+  border:1px solid #dbe4ee;
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+}
+.ag-hora{
+  background:#f8fafc;
+  border-bottom:1px solid #edf2f7;
+  padding:13px 10px;
+  font-weight:900;
+  color:#475569;
+  min-height:54px;
+}
+.ag-slot{
+  border-bottom:1px solid #edf2f7;
+  padding:8px;
+  min-height:54px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.ag-slot:hover{background:#f8fbff}
+.ag-item{
+  border:1px solid #bfdbfe;
+  background:#eff6ff;
+  color:#1e3a8a;
+  border-radius:12px;
+  padding:8px 10px;
+  min-width:220px;
+  max-width:360px;
+  cursor:pointer;
+}
+.ag-item strong{display:block;color:#0f172a}
+.ag-item .sub{font-size:12px;color:#475569;margin-top:2px}
+.ag-status{
+  display:inline-flex;
+  border-radius:999px;
+  padding:3px 8px;
+  font-size:11px;
+  font-weight:1000;
+  margin-top:5px;
+}
+.ag-aguardando{background:#fef3c7;color:#92400e}
+.ag-confirmado{background:#dcfce7;color:#166534}
+.ag-atendido{background:#dbeafe;color:#1d4ed8}
+.ag-cancelado{background:#fee2e2;color:#991b1b}
+.ag-faltou{background:#f3e8ff;color:#6b21a8}
+.ag-bloqueado{background:#e5e7eb;color:#374151}
+.ag-procedimento{border-color:#a7f3d0;background:#ecfdf5}
+.ag-list-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.ag-calendar-mini{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px;
+}
+.ag-day{
+  border:1px solid #dbe4ee;
+  border-radius:12px;
+  padding:8px;
+  min-height:76px;
+  background:#fff;
+  cursor:pointer;
+}
+.ag-day:hover{background:#eff6ff}
+.ag-day strong{display:block;margin-bottom:4px}
+.ag-day.today{border-color:#1d4ed8;background:#eff6ff}
+.ag-day .dot{
+  display:inline-flex;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#1d4ed8;
+  margin-right:3px;
+}
+.ag-block{
+  background:#f3f4f6;
+  color:#374151;
+  border:1px dashed #94a3b8;
+}
+.ag-bottom-space{height:100px}
+@media(max-width:980px){
+  .ag-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ag-filtros{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .ag-kpis{grid-template-columns:1fr}
+  .ag-filtros{grid-template-columns:1fr}
+  .ag-grid-dia{grid-template-columns:72px 1fr}
+  .ag-item{min-width:100%;max-width:100%}
+}
+
+
+
+/* =========================================================
+   ZERO V6.0 — AGENDA MÉDICA MAIS PRÓXIMA DO ORIGINAL
+========================================================= */
+.ag-original-page{
+  padding-bottom:120px;
+}
+
+.ag-original-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.ag-original-title h2{
+  margin:0;
+  font-size:28px;
+  color:#0f172a;
+  font-weight:1000;
+}
+
+.ag-original-title p{
+  margin:4px 0 0;
+  color:#64748b;
+}
+
+.ag-original-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.ag-original-kpis{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin:14px 0 18px;
+}
+
+.ag-original-kpi{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.ag-original-kpi .ico{
+  width:52px;
+  height:52px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  background:#eff6ff;
+}
+
+.ag-original-kpi .num{
+  font-size:29px;
+  font-weight:1000;
+  color:#0f172a;
+  line-height:1;
+}
+
+.ag-original-kpi .lbl{
+  color:#475569;
+  font-weight:800;
+  font-size:13px;
+  margin-top:3px;
+}
+
+.ag-original-filter{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:16px;
+  display:grid;
+  grid-template-columns:170px minmax(220px,1fr) minmax(180px,260px) auto;
+  gap:10px;
+  align-items:end;
+}
+
+.ag-original-filter input,
+.ag-original-filter select{
+  width:100%;
+}
+
+.ag-original-section{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  margin-bottom:16px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+}
+
+.ag-original-section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  padding:18px;
+  border-bottom:1px solid #edf2f7;
+}
+
+.ag-original-section-head h3{
+  margin:0;
+  color:#0f172a;
+  font-size:18px;
+  font-weight:1000;
+}
+
+.ag-original-section-body{
+  padding:16px 18px;
+}
+
+.ag-original-empty{
+  color:#94a3b8;
+  text-align:center;
+  padding:26px;
+  font-weight:800;
+}
+
+.ag-original-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.ag-original-table th{
+  text-transform:uppercase;
+  font-size:12px;
+  color:#334155;
+  background:#f8fafc;
+  border-bottom:1px solid #dbe4ee;
+  padding:12px 10px;
+  text-align:left;
+}
+
+.ag-original-table td{
+  border-bottom:1px solid #edf2f7;
+  padding:13px 10px;
+  vertical-align:middle;
+}
+
+.ag-original-table tr:hover td{
+  background:#f8fbff;
+}
+
+.ag-original-paciente strong{
+  color:#0f172a;
+  display:block;
+}
+
+.ag-original-paciente span{
+  color:#64748b;
+  font-size:12px;
+}
+
+.ag-original-actions-row{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.ag-status-pill{
+  display:inline-flex;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:1000;
+}
+
+.ag-status-aguardando{background:#fef3c7;color:#92400e}
+.ag-status-confirmado{background:#dcfce7;color:#166534}
+.ag-status-atendido{background:#dbeafe;color:#1d4ed8}
+.ag-status-cancelado{background:#fee2e2;color:#991b1b}
+.ag-status-faltou{background:#f3e8ff;color:#6b21a8}
+
+.ag-original-mini-calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px;
+}
+
+.ag-original-day{
+  border:1px solid #dbe4ee;
+  border-radius:14px;
+  min-height:88px;
+  padding:10px;
+  cursor:pointer;
+  background:#fff;
+}
+
+.ag-original-day:hover{
+  background:#eff6ff;
+  border-color:#93c5fd;
+}
+
+.ag-original-day.today{
+  background:#eff6ff;
+  border-color:#1d4ed8;
+}
+
+.ag-original-day strong{
+  display:block;
+  color:#0f172a;
+}
+
+.ag-original-day small{
+  color:#64748b;
+}
+
+.ag-original-modal-info{
+  background:#eff6ff;
+  color:#1e3a8a;
+  border:1px solid #bfdbfe;
+  border-radius:14px;
+  padding:12px;
+  margin-bottom:12px;
+  font-weight:800;
+}
+
+@media(max-width:980px){
+  .ag-original-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ag-original-filter{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:640px){
+  .ag-original-kpis{grid-template-columns:1fr}
+  .ag-original-filter{grid-template-columns:1fr}
+  .ag-original-actions{justify-content:flex-start}
+  .ag-original-table{min-width:860px}
+  .ag-original-section-body{overflow:auto}
+}
+
+
+
+/* =========================================================
+   ZERO V6.1 — AGENDA IGUAL AO PRINT ORIGINAL
+========================================================= */
+.ag-print-layout{
+  display:grid;
+  grid-template-columns:320px minmax(0,1fr);
+  gap:18px;
+  padding-bottom:120px;
+}
+
+.ag-print-calendar{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 8px 22px rgba(15,23,42,.05);
+  height:max-content;
+  position:sticky;
+  top:14px;
+}
+
+.ag-cal-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+  color:#0f172a;
+  font-weight:1000;
+  font-size:17px;
+}
+
+.ag-cal-nav{
+  border:0;
+  background:transparent;
+  font-size:20px;
+  font-weight:1000;
+  cursor:pointer;
+  color:#0f172a;
+}
+
+.ag-cal-week{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px;
+  margin-bottom:8px;
+  color:#0f172a;
+  font-weight:1000;
+  text-align:center;
+  font-size:13px;
+}
+
+.ag-cal-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:7px;
+}
+
+.ag-cal-day{
+  height:38px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  color:#9ca3af;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+
+.ag-cal-day.in-month{
+  color:#94a3b8;
+}
+
+.ag-cal-day.has-agenda{
+  color:#1d4ed8;
+  background:#dbeafe;
+  border-color:#2563eb;
+}
+
+.ag-cal-day.selected{
+  color:#fff;
+  background:#2563eb;
+  border-color:#1d4ed8;
+}
+
+.ag-cal-day:hover{
+  background:#eff6ff;
+  color:#1d4ed8;
+  border-color:#93c5fd;
+}
+
+.ag-print-main{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 22px rgba(15,23,42,.05);
+}
+
+.ag-print-main-head{
+  padding:18px 20px 16px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.ag-print-title-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.ag-print-title-row h2{
+  margin:0;
+  font-size:24px;
+  color:#0f172a;
+  font-weight:1000;
+}
+
+.ag-print-controls{
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) auto auto;
+  gap:10px;
+  align-items:center;
+}
+
+.ag-print-controls select{
+  height:32px;
+  border:1px solid #9ca3af;
+  border-radius:0;
+  padding:4px 10px;
+  background:#fff;
+  font-size:14px;
+}
+
+.ag-print-controls .btn{
+  height:38px;
+  border-radius:14px;
+}
+
+.ag-slots-wrap{
+  padding:14px 16px 20px;
+  display:grid;
+  gap:9px;
+}
+
+.ag-slot-print{
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  border-radius:16px;
+  padding:12px 12px;
+  min-height:62px;
+}
+
+.ag-slot-time{
+  font-size:18px;
+  font-weight:1000;
+  color:#0f172a;
+}
+
+.ag-slot-info strong{
+  color:#0f172a;
+  font-size:17px;
+  display:block;
+}
+
+.ag-slot-info span{
+  color:#64748b;
+  display:block;
+  margin-top:2px;
+}
+
+.ag-slot-print.ocupado{
+  background:#fff;
+  border-color:#dbe4ee;
+}
+
+.ag-slot-print.bloqueado{
+  background:#f3f4f6;
+  border-color:#cbd5e1;
+}
+
+.ag-slot-print.procedimento{
+  background:#ecfdf5;
+  border-color:#86efac;
+}
+
+.ag-slot-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.ag-round-btn{
+  border:0;
+  background:#255be8;
+  color:#fff;
+  border-radius:999px;
+  padding:8px 14px;
+  font-weight:1000;
+  cursor:pointer;
+}
+
+.ag-config-modal-card{
+  border:1px solid #dbe4ee;
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:18px;
+  background:#fff;
+}
+
+.ag-config-card-title{
+  padding:14px 16px;
+  border-bottom:1px solid #edf2f7;
+  font-weight:1000;
+  color:#0f172a;
+  font-size:16px;
+}
+
+.ag-config-card-body{
+  padding:16px;
+}
+
+.ag-config-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  align-items:end;
+}
+
+.ag-config-grid.three{
+  grid-template-columns:280px 180px auto auto;
+}
+
+.ag-config-grid.two{
+  grid-template-columns:240px auto;
+}
+
+.ag-config-help{
+  color:#64748b;
+  font-size:13px;
+  margin-top:8px;
+}
+
+.ag-week-hours{
+  margin-top:14px;
+  display:grid;
+  gap:10px;
+}
+
+.ag-week-row{
+  display:grid;
+  grid-template-columns:110px 1fr 1fr 1fr;
+  gap:10px;
+  align-items:center;
+  border:1px solid #edf2f7;
+  border-radius:12px;
+  padding:10px;
+}
+
+.ag-week-row strong{
+  color:#0f172a;
+}
+
+.ag-month-blocked{
+  color:#991b1b;
+  background:#fee2e2;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:1000;
+}
+
+.ag-month-open{
+  color:#166534;
+  background:#dcfce7;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:1000;
+}
+
+@media(max-width:980px){
+  .ag-print-layout{
+    grid-template-columns:1fr;
+  }
+  .ag-print-calendar{
+    position:relative;
+    top:0;
+  }
+  .ag-print-controls{
+    grid-template-columns:1fr;
+  }
+  .ag-config-grid,
+  .ag-config-grid.three,
+  .ag-config-grid.two{
+    grid-template-columns:1fr;
+  }
+  .ag-week-row{
+    grid-template-columns:1fr;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V6.2 — AGENDA COMPLETA ORIGINAL
+   cores, legenda, encaixe, recorrência, confirmação, impressão e exportação
+========================================================= */
+.ag-slot-print{
+  background:var(--ag-vago-bg,#eff6ff) !important;
+  border-color:var(--ag-vago-border,#bfdbfe) !important;
+}
+
+.ag-slot-print.ocupado{
+  background:var(--ag-consulta-bg,#ffffff) !important;
+  border-color:var(--ag-consulta-border,#dbe4ee) !important;
+  border-left:6px solid var(--ag-consulta-color,#2563eb) !important;
+}
+
+.ag-slot-print.procedimento{
+  background:var(--ag-procedimento-bg,#ecfdf5) !important;
+  border-color:var(--ag-procedimento-border,#86efac) !important;
+  border-left:6px solid var(--ag-procedimento-color,#059669) !important;
+}
+
+.ag-slot-print.bloqueado{
+  background:var(--ag-bloqueio-bg,#f3f4f6) !important;
+  border-color:var(--ag-bloqueio-border,#cbd5e1) !important;
+  border-left:6px solid var(--ag-bloqueio-color,#64748b) !important;
+}
+
+.ag-slot-print.status-confirmado{
+  border-left-color:var(--ag-confirmado-color,#16a34a) !important;
+}
+
+.ag-slot-print.status-aguardando{
+  border-left-color:var(--ag-aguardando-color,#d97706) !important;
+}
+
+.ag-slot-print.status-atendido{
+  border-left-color:var(--ag-atendido-color,#2563eb) !important;
+}
+
+.ag-slot-print.status-cancelado,
+.ag-slot-print.status-faltou{
+  border-left-color:var(--ag-cancelado-color,#dc2626) !important;
+}
+
+.ag-legend{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.ag-legend span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border-radius:999px;
+  border:1px solid #dbe4ee;
+  background:#fff;
+  padding:5px 9px;
+  color:#334155;
+  font-size:12px;
+  font-weight:900;
+}
+
+.ag-legend i{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  display:inline-block;
+}
+
+.ag-color-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.ag-color-item{
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:10px;
+  background:#f8fafc;
+}
+
+.ag-color-item label{
+  font-size:12px;
+  font-weight:1000;
+  color:#334155;
+  display:block;
+  margin-bottom:6px;
+}
+
+.ag-color-item input[type="color"]{
+  width:100%;
+  height:38px;
+  padding:2px;
+  border:1px solid #cbd5e1;
+  border-radius:10px;
+  background:#fff;
+}
+
+.ag-prof-color-list{
+  display:grid;
+  gap:8px;
+  margin-top:10px;
+}
+
+.ag-prof-color-row{
+  display:grid;
+  grid-template-columns:minmax(180px,1fr) 90px;
+  gap:10px;
+  align-items:center;
+  border:1px solid #edf2f7;
+  border-radius:12px;
+  padding:10px;
+}
+
+.ag-slot-extra{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-top:5px;
+}
+
+.ag-mini-tag{
+  display:inline-flex;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#3730a3;
+  padding:3px 7px;
+  font-size:11px;
+  font-weight:900;
+}
+
+.ag-confirmado-tag{
+  background:#dcfce7;
+  color:#166534;
+}
+
+.ag-nao-confirmado-tag{
+  background:#fef3c7;
+  color:#92400e;
+}
+
+.ag-config-card-body .btn{
+  min-height:40px;
+}
+
+@media(max-width:900px){
+  .ag-color-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:560px){
+  .ag-color-grid{grid-template-columns:1fr}
+  .ag-prof-color-row{grid-template-columns:1fr}
+}
+
+
+
+/* =========================================================
+   ZERO V6.3 — DUAS AGENDAS SEPARADAS
+   Agenda Médica = consulta médica
+   Agenda Procedimentos = procedimentos
+========================================================= */
+.ag-route-badge{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:12px;
+  font-weight:1000;
+  margin-left:8px;
+  vertical-align:middle;
+}
+.ag-route-badge.consulta{
+  background:#dbeafe;
+  color:#1d4ed8;
+}
+.ag-route-badge.procedimento{
+  background:#dcfce7;
+  color:#166534;
+}
+.ag-proc-note{
+  margin-top:10px;
+  border:1px solid #bbf7d0;
+  background:#ecfdf5;
+  color:#166534;
+  border-radius:12px;
+  padding:10px 12px;
+  font-weight:800;
+  font-size:13px;
+}
+
+
+
+/* =========================================================
+   ZERO V6.4 — CALENDÁRIO COM CORES POR VAGAS
+   Azul = vago normal
+   Amarelo = 5 vagas ou menos
+   Vermelho = sem vagas
+   Removida necessidade de cor por profissional
+========================================================= */
+.ag-cal-day{
+  position:relative;
+  height:46px !important;
+  font-size:14px;
+}
+
+.ag-cal-day .ag-day-num{
+  display:block;
+  line-height:1;
+}
+
+.ag-cal-day .ag-day-vagas{
+  display:block;
+  font-size:9px;
+  line-height:1;
+  margin-top:3px;
+  font-weight:1000;
+}
+
+.ag-cal-day.vagas-ok{
+  color:#1d4ed8 !important;
+  background:#dbeafe !important;
+  border-color:#2563eb !important;
+}
+
+.ag-cal-day.vagas-poucas{
+  color:#92400e !important;
+  background:#fef3c7 !important;
+  border-color:#f59e0b !important;
+}
+
+.ag-cal-day.vagas-zero{
+  color:#991b1b !important;
+  background:#fee2e2 !important;
+  border-color:#ef4444 !important;
+}
+
+.ag-cal-day.selected{
+  color:#fff !important;
+  background:#2563eb !important;
+  border-color:#1d4ed8 !important;
+}
+
+.ag-cal-day.selected .ag-day-vagas{
+  color:#fff !important;
+}
+
+.ag-legend .profissional-cor,
+.ag-prof-color-list,
+.ag-prof-color-row,
+#cfg-cores-profissionais-wrap{
+  display:none !important;
+}
+
+
+
+/* =========================================================
+   ZERO V6.5 — AGENDA CAMPOS CORRIGIDOS
+   - Calendário sem quantidade de vagas
+   - Sem botão encaixe no horário
+   - Sem recorrência/repetir
+   - Campo Presencial/Virtual
+   - Campo Consulta/Retorno
+========================================================= */
+.ag-cal-day{
+  height:38px !important;
+}
+
+.ag-cal-day .ag-day-vagas{
+  display:none !important;
+}
+
+.ag-slot-actions button[onclick*="modalEncaixe"],
+.ag-mini-tag[style*="7c3aed"]{
+  display:none !important;
+}
+
+
+
+/* =========================================================
+   ZERO V6.6 — AGENDA MODAL ORIGINAL + BLOQUEIO CRUZADO
+========================================================= */
+.ag-slot-print.ocupado{
+  background:#fff7ed !important;
+  border-color:#fdba74 !important;
+}
+
+.ag-slot-print.bloqueado-cruzado{
+  background:#f3f4f6 !important;
+  border-color:#cbd5e1 !important;
+  border-left:6px solid #64748b !important;
+}
+
+.ag-slot-print.bloqueado-cruzado .ag-slot-info strong{
+  color:#374151;
+}
+
+.ag-chegou-btn{
+  background:#10b981 !important;
+}
+
+.ag-cancelar-btn{
+  background:#ef4444 !important;
+}
+
+.ag-editar-btn{
+  background:#f59e0b !important;
+}
+
+.ag-modal-grid-original{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px 16px;
+}
+
+.ag-modal-grid-original .full{
+  grid-column:1/-1;
+}
+
+.ag-modal-grid-original label{
+  font-weight:1000;
+  color:#334155;
+  margin-bottom:6px;
+  display:block;
+}
+
+.ag-modal-grid-original input,
+.ag-modal-grid-original select,
+.ag-modal-grid-original textarea{
+  width:100%;
+}
+
+.ag-modal-title-note{
+  color:#64748b;
+  font-size:12px;
+  font-weight:700;
+}
+
+.ag-paciente-sugestoes{
+  position:relative;
+}
+
+.ag-paciente-results{
+  position:absolute;
+  z-index:30;
+  left:0;
+  right:0;
+  top:100%;
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:12px;
+  box-shadow:0 12px 30px rgba(15,23,42,.12);
+  max-height:220px;
+  overflow:auto;
+  display:none;
+}
+
+.ag-paciente-results button{
+  width:100%;
+  text-align:left;
+  border:0;
+  background:#fff;
+  padding:10px 12px;
+  cursor:pointer;
+  font-weight:800;
+}
+
+.ag-paciente-results button:hover{
+  background:#eff6ff;
+}
+
+@media(max-width:760px){
+  .ag-modal-grid-original{
+    grid-template-columns:1fr;
+  }
+}
+
+
+
+/* ZERO V7.1 — modal estático */
+[data-static-modal="true"]{
+  overscroll-behavior:contain;
+}
+.ag-month-blocked,
+.ag-month-open{
+  display:inline-flex;
+  min-height:24px;
+  align-items:center;
+}
+
+
+
+/* ZERO V7.2 — PWA */
+.pwa-install-banner{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  background:#1d4ed8;
+  color:#fff;
+  border-radius:16px;
+  padding:12px 14px;
+  box-shadow:0 12px 28px rgba(15,23,42,.22);
+  display:none;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+}
+.pwa-install-banner button{
+  border:0;
+  background:#fff;
+  color:#1d4ed8;
+  border-radius:999px;
+  padding:7px 11px;
+  font-weight:1000;
+  cursor:pointer;
+}
+.pwa-install-banner .x{
+  background:transparent;
+  color:#fff;
+  padding:4px 7px;
+}
+@media(max-width:640px){
+  .pwa-install-banner{
+    left:12px;
+    right:12px;
+    bottom:12px;
+  }
+}
+
+
+
+/* ZERO V7.3 — Financeiro sem piscar */
+.fin-toolbar .row{
+  min-height:40px;
+  align-items:center;
+}
+.export-menu-inline{
+  min-height:40px;
+  align-items:center;
+}
+.fin-tabs{
+  min-height:42px;
+}
+#financeiro-body{
+  contain:layout paint;
+}
+
+
+
+/* =========================================================
+   ZERO V7.4 — MARGENS DE IMPRESSÃO DOCUMENTOS CLÍNICOS
+   Receita, Laudo, Pedido de Exames e Atestado:
+   Cabeçalho / topo: 4 cm
+   Rodapé / inferior: 6 cm
+========================================================= */
+@media print{
+  @page{
+    margin-top:4cm;
+    margin-right:1.5cm;
+    margin-bottom:6cm;
+    margin-left:1.5cm;
+  }
+
+  body.print-documento-clinico,
+  body.receita-print,
+  body.laudo-print,
+  body.exames-print,
+  body.atestado-print{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  .print-header-imagem,
+  .print-header-original{
+    margin-top:0 !important;
+  }
+
+  .print-footer,
+  .assinatura,
+  .assinatura-medico{
+    page-break-inside:avoid;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V7.5 — BARRA DE NAVEGAÇÃO DO MENU LATERAL
+   Restaura rolagem própria e barra visível no menu lateral.
+========================================================= */
+
+/* O menu lateral fica fixo e só ele rola quando precisar */
+.sidebar,
+.cm-sidebar,
+aside.sidebar,
+aside.cm-sidebar,
+#sidebar{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow:hidden !important;
+  display:flex !important;
+  flex-direction:column !important;
+  position:sticky !important;
+  top:0 !important;
+}
+
+/* A navegação do menu tem barra própria */
+.sidebar nav,
+.cm-sidebar nav,
+#sidebar nav,
+.sidebar .nav,
+.cm-sidebar .nav,
+#sidebar .nav,
+.nav-menu,
+.menu-lateral,
+.side-menu{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  padding-right:6px !important;
+  scrollbar-width:auto !important;
+  scrollbar-color:#94a3b8 transparent !important;
+}
+
+/* Chrome/Edge: deixa a barrinha visível */
+.sidebar nav::-webkit-scrollbar,
+.cm-sidebar nav::-webkit-scrollbar,
+#sidebar nav::-webkit-scrollbar,
+.sidebar .nav::-webkit-scrollbar,
+.cm-sidebar .nav::-webkit-scrollbar,
+#sidebar .nav::-webkit-scrollbar,
+.nav-menu::-webkit-scrollbar,
+.menu-lateral::-webkit-scrollbar,
+.side-menu::-webkit-scrollbar{
+  width:8px !important;
+  display:block !important;
+}
+
+.sidebar nav::-webkit-scrollbar-track,
+.cm-sidebar nav::-webkit-scrollbar-track,
+#sidebar nav::-webkit-scrollbar-track,
+.sidebar .nav::-webkit-scrollbar-track,
+.cm-sidebar .nav::-webkit-scrollbar-track,
+#sidebar .nav::-webkit-scrollbar-track,
+.nav-menu::-webkit-scrollbar-track,
+.menu-lateral::-webkit-scrollbar-track,
+.side-menu::-webkit-scrollbar-track{
+  background:transparent !important;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb,
+.cm-sidebar nav::-webkit-scrollbar-thumb,
+#sidebar nav::-webkit-scrollbar-thumb,
+.sidebar .nav::-webkit-scrollbar-thumb,
+.cm-sidebar .nav::-webkit-scrollbar-thumb,
+#sidebar .nav::-webkit-scrollbar-thumb,
+.nav-menu::-webkit-scrollbar-thumb,
+.menu-lateral::-webkit-scrollbar-thumb,
+.side-menu::-webkit-scrollbar-thumb{
+  background:#94a3b8 !important;
+  border-radius:999px !important;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb:hover,
+.cm-sidebar nav::-webkit-scrollbar-thumb:hover,
+#sidebar nav::-webkit-scrollbar-thumb:hover,
+.sidebar .nav::-webkit-scrollbar-thumb:hover,
+.cm-sidebar .nav::-webkit-scrollbar-thumb:hover,
+#sidebar .nav::-webkit-scrollbar-thumb:hover,
+.nav-menu::-webkit-scrollbar-thumb:hover,
+.menu-lateral::-webkit-scrollbar-thumb:hover,
+.side-menu::-webkit-scrollbar-thumb:hover{
+  background:#64748b !important;
+}
+
+/* Botão sair/rodapé do menu fica fixo no fim, sem sumir */
+.cm-logout-area,
+.sidebar-footer,
+.menu-footer,
+.logout-area{
+  flex:0 0 auto !important;
+  margin-top:auto !important;
+}
+
+/* A área principal continua rolando separada */
+main,
+.main,
+.content-wrap,
+#main,
+.app-content{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+}
+
+/* Em telas pequenas mantém comportamento normal */
+@media(max-width:760px){
+  .sidebar,
+  .cm-sidebar,
+  aside.sidebar,
+  aside.cm-sidebar,
+  #sidebar{
+    position:relative !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+
+  .sidebar nav,
+  .cm-sidebar nav,
+  #sidebar nav,
+  .sidebar .nav,
+  .cm-sidebar .nav,
+  #sidebar .nav{
+    overflow-y:visible !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V7.6 — MENU LATERAL COM ROLAGEM REAL + LOGOUT ACESSÍVEL
+   Correção definitiva:
+   - A barra lateral inteira passa a ter rolagem própria.
+   - Não depende mais de existir <nav>.
+   - O botão Sair/Logout fica dentro da rolagem e acessível no final.
+========================================================= */
+
+/* A tela principal continua fixa, mas o conteúdo rola separado */
+html,
+body{
+  height:100% !important;
+}
+
+body{
+  overflow:hidden !important;
+}
+
+/* Sidebar agora rola ela inteira, para garantir acesso ao último botão */
+.sidebar,
+.cm-sidebar,
+aside.sidebar,
+aside.cm-sidebar,
+#sidebar,
+aside{
+  height:100vh !important;
+  max-height:100vh !important;
+  min-height:100vh !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  position:sticky !important;
+  top:0 !important;
+  align-self:flex-start !important;
+  display:block !important;
+  padding-bottom:28px !important;
+  scrollbar-width:auto !important;
+  scrollbar-color:#94a3b8 transparent !important;
+}
+
+/* Não deixa filhos internos travarem a rolagem */
+.sidebar nav,
+.cm-sidebar nav,
+#sidebar nav,
+.sidebar .nav,
+.cm-sidebar .nav,
+#sidebar .nav,
+.nav-menu,
+.menu-lateral,
+.side-menu{
+  overflow:visible !important;
+  max-height:none !important;
+  height:auto !important;
+  min-height:auto !important;
+  flex:none !important;
+}
+
+/* Garante espaço no final depois do botão sair */
+.sidebar::after,
+.cm-sidebar::after,
+#sidebar::after,
+aside.sidebar::after,
+aside.cm-sidebar::after{
+  content:"";
+  display:block;
+  height:42px;
+}
+
+/* Scrollbar visível no Chrome/Edge */
+.sidebar::-webkit-scrollbar,
+.cm-sidebar::-webkit-scrollbar,
+#sidebar::-webkit-scrollbar,
+aside.sidebar::-webkit-scrollbar,
+aside.cm-sidebar::-webkit-scrollbar,
+aside::-webkit-scrollbar{
+  width:9px !important;
+  display:block !important;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.cm-sidebar::-webkit-scrollbar-thumb,
+#sidebar::-webkit-scrollbar-thumb,
+aside.sidebar::-webkit-scrollbar-thumb,
+aside.cm-sidebar::-webkit-scrollbar-thumb,
+aside::-webkit-scrollbar-thumb{
+  background:#94a3b8 !important;
+  border-radius:999px !important;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+.cm-sidebar::-webkit-scrollbar-thumb:hover,
+#sidebar::-webkit-scrollbar-thumb:hover,
+aside.sidebar::-webkit-scrollbar-thumb:hover,
+aside.cm-sidebar::-webkit-scrollbar-thumb:hover,
+aside::-webkit-scrollbar-thumb:hover{
+  background:#64748b !important;
+}
+
+/* O logout NÃO fica mais preso fora da área visível */
+.cm-logout-area,
+.sidebar-footer,
+.menu-footer,
+.logout-area{
+  position:static !important;
+  margin-top:18px !important;
+  padding-bottom:22px !important;
+  flex:none !important;
+}
+
+/* Área principal rola separada */
+main,
+.main,
+.content-wrap,
+#main,
+.app-content{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+}
+
+/* Força app/layout a não empurrar a página inteira */
+#app,
+.app,
+.layout,
+.app-shell,
+.main-layout{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow:hidden !important;
+}
+
+/* Mobile fica natural */
+@media(max-width:760px){
+  body{
+    overflow:auto !important;
+  }
+
+  .sidebar,
+  .cm-sidebar,
+  aside.sidebar,
+  aside.cm-sidebar,
+  #sidebar,
+  aside{
+    position:relative !important;
+    height:auto !important;
+    max-height:none !important;
+    min-height:auto !important;
+    overflow:visible !important;
+  }
+
+  main,
+  .main,
+  .content-wrap,
+  #main,
+  .app-content{
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V7.7 — SCROLL REAL NO MENU LATERAL COLAPSADO
+   O print mostra o menu em modo só ícones. Nesta versão:
+   - a barra de ícones rola dentro do menu lateral
+   - o logout/sair fica sempre alcançável
+   - a rolagem da página não substitui a rolagem do menu
+========================================================= */
+
+/* App ocupa a tela inteira */
+html, body{
+  width:100% !important;
+  height:100% !important;
+  min-height:100% !important;
+}
+
+body{
+  overflow:hidden !important;
+}
+
+/* Layout principal não deve jogar o scroll para o body */
+#app,
+.app,
+.layout,
+.app-shell,
+.main-layout{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow:hidden !important;
+}
+
+/* Sidebar fixa na viewport, inclusive quando estiver colapsada */
+.sidebar,
+.cm-sidebar,
+#sidebar,
+aside.sidebar,
+aside.cm-sidebar,
+.app-sidebar,
+.side{
+  height:100vh !important;
+  max-height:100vh !important;
+  min-height:100vh !important;
+  overflow:hidden !important;
+  position:sticky !important;
+  top:0 !important;
+  left:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  flex-shrink:0 !important;
+}
+
+/* Cabeçalho do menu não rola */
+.sidebar-header,
+.cm-sidebar-header,
+.menu-header,
+.logo-area,
+.sidebar .brand,
+.cm-sidebar .brand{
+  flex:0 0 auto !important;
+}
+
+/* A ÁREA DOS ÍCONES/BOTÕES É QUEM ROLA */
+.sidebar nav,
+.cm-sidebar nav,
+#sidebar nav,
+.sidebar .nav,
+.cm-sidebar .nav,
+#sidebar .nav,
+.nav-menu,
+.menu-lateral,
+.side-menu,
+.sidebar-menu,
+.menu-items,
+.sidebar .menu,
+.cm-sidebar .menu{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  height:auto !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  padding-right:5px !important;
+  padding-bottom:18px !important;
+  scrollbar-width:thin !important;
+  scrollbar-color:#64748b transparent !important;
+}
+
+/* Se o sistema usa botões soltos diretamente dentro da sidebar,
+   o JS abaixo cria a classe .cm-menu-scroll-v77 nesse bloco. */
+.cm-menu-scroll-v77{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  padding-right:5px !important;
+  padding-bottom:18px !important;
+  scrollbar-width:thin !important;
+  scrollbar-color:#64748b transparent !important;
+}
+
+/* Scrollbar visível no Chrome/Edge */
+.sidebar nav::-webkit-scrollbar,
+.cm-sidebar nav::-webkit-scrollbar,
+#sidebar nav::-webkit-scrollbar,
+.sidebar .nav::-webkit-scrollbar,
+.cm-sidebar .nav::-webkit-scrollbar,
+#sidebar .nav::-webkit-scrollbar,
+.nav-menu::-webkit-scrollbar,
+.menu-lateral::-webkit-scrollbar,
+.side-menu::-webkit-scrollbar,
+.sidebar-menu::-webkit-scrollbar,
+.menu-items::-webkit-scrollbar,
+.sidebar .menu::-webkit-scrollbar,
+.cm-sidebar .menu::-webkit-scrollbar,
+.cm-menu-scroll-v77::-webkit-scrollbar{
+  width:7px !important;
+  display:block !important;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb,
+.cm-sidebar nav::-webkit-scrollbar-thumb,
+#sidebar nav::-webkit-scrollbar-thumb,
+.sidebar .nav::-webkit-scrollbar-thumb,
+.cm-sidebar .nav::-webkit-scrollbar-thumb,
+#sidebar .nav::-webkit-scrollbar-thumb,
+.nav-menu::-webkit-scrollbar-thumb,
+.menu-lateral::-webkit-scrollbar-thumb,
+.side-menu::-webkit-scrollbar-thumb,
+.sidebar-menu::-webkit-scrollbar-thumb,
+.menu-items::-webkit-scrollbar-thumb,
+.sidebar .menu::-webkit-scrollbar-thumb,
+.cm-sidebar .menu::-webkit-scrollbar-thumb,
+.cm-menu-scroll-v77::-webkit-scrollbar-thumb{
+  background:#64748b !important;
+  border-radius:999px !important;
+}
+
+/* O logout/sair fica no rodapé fixo do menu, não escondido fora da tela */
+.cm-logout-area,
+.sidebar-footer,
+.menu-footer,
+.logout-area,
+.sidebar .logout,
+.cm-sidebar .logout{
+  flex:0 0 auto !important;
+  position:static !important;
+  margin-top:8px !important;
+  padding-top:8px !important;
+  padding-bottom:10px !important;
+  border-top:1px solid rgba(148,163,184,.25) !important;
+  background:inherit !important;
+  z-index:2 !important;
+}
+
+/* Quando estiver colapsado, botão sair deve continuar aparecendo como ícone */
+.sidebar.collapsed .cm-logout-area,
+.sidebar.collapsed .sidebar-footer,
+.sidebar.collapsed .menu-footer,
+.sidebar.collapsed .logout-area,
+.cm-sidebar.collapsed .cm-logout-area,
+.cm-sidebar.collapsed .sidebar-footer,
+.cm-sidebar.collapsed .menu-footer,
+.cm-sidebar.collapsed .logout-area{
+  display:flex !important;
+  justify-content:center !important;
+}
+
+/* Área principal: só ela rola no conteúdo */
+main,
+.main,
+.content-wrap,
+#main,
+.app-content,
+.content,
+#content-wrapper{
+  height:100vh !important;
+  max-height:100vh !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+}
+
+/* O conteúdo interno não deve criar scroll no body */
+#content{
+  min-height:auto !important;
+}
+
+/* Mobile segue fluxo normal */
+@media(max-width:760px){
+  body{
+    overflow:auto !important;
+  }
+
+  #app,
+  .app,
+  .layout,
+  .app-shell,
+  .main-layout{
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+
+  .sidebar,
+  .cm-sidebar,
+  #sidebar,
+  aside.sidebar,
+  aside.cm-sidebar,
+  .app-sidebar,
+  .side{
+    height:auto !important;
+    max-height:none !important;
+    min-height:auto !important;
+    overflow:visible !important;
+    position:relative !important;
+  }
+
+  .sidebar nav,
+  .cm-sidebar nav,
+  #sidebar nav,
+  .sidebar .nav,
+  .cm-sidebar .nav,
+  #sidebar .nav,
+  .nav-menu,
+  .menu-lateral,
+  .side-menu,
+  .sidebar-menu,
+  .menu-items,
+  .sidebar .menu,
+  .cm-sidebar .menu,
+  .cm-menu-scroll-v77{
+    overflow:visible !important;
+    max-height:none !important;
+  }
+
+  main,
+  .main,
+  .content-wrap,
+  #main,
+  .app-content,
+  .content,
+  #content-wrapper{
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+}
+
+
+
+/* =========================================================
+   ZERO V7.9 — LGPD OFFLINE
+========================================================= */
+.lgpd-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 9px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:1000;
+  background:#dbeafe;
+  color:#1d4ed8;
+}
+.lgpd-alert{
+  border:1px solid #fde68a;
+  background:#fffbeb;
+  color:#92400e;
+  border-radius:14px;
+  padding:12px;
+  margin:12px 0;
+  font-weight:800;
+}
+.lgpd-danger{
+  border:1px solid #fecaca;
+  background:#fef2f2;
+  color:#991b1b;
+  border-radius:14px;
+  padding:12px;
+  margin:12px 0;
+  font-weight:800;
+}
+.lgpd-card{
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  margin-bottom:16px;
+}
+.lgpd-card-title{
+  font-weight:1000;
+  color:#0f172a;
+  margin-bottom:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+}
+.lgpd-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.lgpd-switch-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid #edf2f7;
+}
+.lgpd-switch-row:last-child{
+  border-bottom:0;
+}
+.lgpd-mask .dado-sensivel,
+.lgpd-mask [data-sensitive="true"],
+.lgpd-mask .cpf,
+.lgpd-mask .telefone,
+.lgpd-mask .endereco,
+.lgpd-mask .diagnostico,
+.lgpd-mask .cid,
+.lgpd-mask .prontuario-texto{
+  filter:blur(4px);
+  user-select:none;
+}
+.lgpd-mask .dado-sensivel:hover,
+.lgpd-mask [data-sensitive="true"]:hover{
+  filter:none;
+}
+.lgpd-privacy-banner{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9998;
+  max-width:420px;
+  background:#0f172a;
+  color:#fff;
+  border-radius:16px;
+  padding:14px;
+  box-shadow:0 16px 36px rgba(15,23,42,.32);
+  display:none;
+}
+.lgpd-privacy-banner strong{
+  display:block;
+  margin-bottom:4px;
+}
+.lgpd-privacy-banner button{
+  margin-top:10px;
+}
+@media(max-width:900px){
+  .lgpd-grid{grid-template-columns:1fr}
+  .lgpd-privacy-banner{left:12px;right:12px;bottom:12px}
+}
+
+
+
+/* ZERO V8.0 — Permissões por perfil */
+[data-permission-hidden="1"]{
+  display:none!important;
+}
+.perfil-badge{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:4px 8px;
+  background:#eff6ff;
+  color:#1d4ed8;
+  font-weight:1000;
+  font-size:12px;
+}
+
+
+/* =========================================================
+   ZERO V8.1 — MENUS ESTÁVEIS / SEM PISCAR
+========================================================= */
+[data-permission-hidden="1"],
+.route-hidden-v81{
+  display:none !important;
+}
+
+.sidebar,
+.cm-sidebar,
+#sidebar,
+aside.sidebar,
+aside.cm-sidebar{
+  contain:layout paint !important;
+}
+
+.sidebar button[data-route],
+.cm-sidebar button[data-route],
+#sidebar button[data-route],
+.sidebar a[data-route],
+.cm-sidebar a[data-route],
+#sidebar a[data-route]{
+  min-height:42px !important;
+  flex:0 0 auto !important;
+  transition:none !important;
+  animation:none !important;
+}
+
+#lgpd-paciente-acoes,
+.lgpd-alert#lgpd-paciente-acoes{
+  display:none !important;
+}
+
+.fin-toolbar,
+.ag-print-main-head,
+.rel-toolbar,
+.ag-tabs,
+.fin-tabs,
+.rel-tabs{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+/* ZERO V8.4 — Lista de pacientes no modal da agenda */
+.ag-paciente-sugestoes{
+  position:relative !important;
+}
+.ag-paciente-results{
+  position:absolute !important;
+  z-index:999999 !important;
+  left:0 !important;
+  right:0 !important;
+  top:100% !important;
+  background:#fff !important;
+  border:1px solid #dbe4ee !important;
+  border-radius:12px !important;
+  box-shadow:0 12px 30px rgba(15,23,42,.18) !important;
+  max-height:260px !important;
+  overflow:auto !important;
+  display:none;
+}
+.ag-paciente-results button{
+  width:100% !important;
+  text-align:left !important;
+  border:0 !important;
+  background:#fff !important;
+  padding:10px 12px !important;
+  cursor:pointer !important;
+  font-weight:800 !important;
+  color:#0f172a !important;
+}
+.ag-paciente-results button:hover{
+  background:#eff6ff !important;
+}
+.ag-paciente-empty{
+  color:#64748b !important;
+  cursor:default !important;
+}
+
+
+/* ZERO V8.5 — Backup visível */
+.backup-original-wrap{
+  display:block !important;
+}
+.backup-original-card{
+  display:block !important;
+  background:#fff !important;
+  border:1px solid #dbe4ee !important;
+  border-radius:16px !important;
+  padding:18px !important;
+  margin:16px 0 !important;
+}
+.backup-modulos-grid{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:10px 24px !important;
+  margin:14px 0 18px !important;
+}
+.backup-hidden-input{
+  display:none !important;
+}
+@media(max-width:900px){
+  .backup-modulos-grid{grid-template-columns:1fr 1fr !important;}
+}
+
+
+/* ZERO V8.6 — Conteúdo Pacientes/Storage visível */
+.pacientes-page .card,
+#content .lgpd-card,
+#content .card{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.sv-table-wrap{
+  overflow:auto !important;
+}
+
+
+/* ZERO V8.7 — Conteúdo Pacientes/Storage */
+.pacientes-page .card,
+#content .lgpd-card,
+#content .card{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.sv-table-wrap{
+  overflow:auto !important;
+}
+
+
+/* ZERO V8.8 — indicador modo privacidade */
+.lgpd-privacy-status-v88{
+  position:fixed;
+  right:16px;
+  top:12px;
+  z-index:99999;
+  border:1px solid #dbe4ee;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:1000;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(15,23,42,.12);
+}
+.lgpd-privacy-status-v88.ativo{
+  background:#dcfce7;
+  color:#166534;
+  border-color:#86efac;
+}
+.lgpd-privacy-status-v88.inativo{
+  background:#f8fafc;
+  color:#475569;
+}
+body.lgpd-mask .cpf,
+body.lgpd-mask .telefone,
+body.lgpd-mask .endereco,
+body.lgpd-mask .diagnostico,
+body.lgpd-mask .cid,
+body.lgpd-mask .prontuario-texto,
+body.lgpd-mask [data-sensitive="true"],
+html.lgpd-mask .cpf,
+html.lgpd-mask .telefone,
+html.lgpd-mask .endereco,
+html.lgpd-mask .diagnostico,
+html.lgpd-mask .cid,
+html.lgpd-mask .prontuario-texto,
+html.lgpd-mask [data-sensitive="true"]{
+  filter:blur(4px)!important;
+  user-select:none!important;
+}
+body.lgpd-mask .cpf:hover,
+body.lgpd-mask .telefone:hover,
+body.lgpd-mask .endereco:hover,
+body.lgpd-mask .diagnostico:hover,
+body.lgpd-mask .cid:hover,
+body.lgpd-mask .prontuario-texto:hover,
+body.lgpd-mask [data-sensitive="true"]:hover{
+  filter:none!important;
+}
+
+/* ZERO V8.8 — Backup módulos recolhível */
+.backup-modulos-grid.is-collapsed{
+  display:none!important;
+}
+.backup-toggle-v88{
+  cursor:pointer;
+  user-select:none;
+}
+
+
+/* ZERO V8.9 — Modal encaixe igual agendamento + financeiro estável */
+#enc-paciente-results.ag-paciente-results{
+  z-index:999999!important;
+}
+.fin-toolbar .row,
+.fin-toolbar .row button,
+.fin-tabs,
+.fin-tabs button{
+  transition:none!important;
+  animation:none!important;
+}
+.fin-toolbar .row{
+  min-height:42px!important;
+  contain:layout paint!important;
+}
+
+
+/* ZERO V9.0 — Modal Profissional padrão original */
+.prof-original-modal .cm-section{
+  margin-bottom:16px !important;
+}
+.prof-original-alert{
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  color:#1e3a8a;
+  border-radius:14px;
+  padding:12px 14px;
+  margin-bottom:14px;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.prof-original-alert strong{
+  font-weight:1000;
+}
+.prof-original-alert span{
+  font-size:13px;
+  color:#475569;
+}
+.prof-original-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+}
+.prof-preview{
+  margin-top:12px;
+  border:1px dashed #cbd5e1;
+  background:#f8fafc;
+  border-radius:12px;
+  padding:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+.prof-preview span{
+  display:inline-flex;
+  background:#fff;
+  border:1px solid #dbe4ee;
+  border-radius:999px;
+  padding:5px 10px;
+  font-weight:900;
+}
+.prof-perfis-help{
+  background:#f8fafc;
+  border:1px solid #dbe4ee;
+  border-radius:12px;
+  padding:10px 12px;
+  font-size:12px;
+  color:#475569;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px 12px;
+}
+@media(max-width:900px){
+  .prof-original-grid{
+    grid-template-columns:1fr !important;
+  }
+  .prof-perfis-help{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* ZERO V9.1 — Logout/Sair */
+.cm-logout-btn,
+button[onclick*="Auth.logout"]{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  position:relative !important;
+  z-index:10 !important;
+}
+#login-page:not(.hidden){
+  display:flex !important;
+}
+#app-shell.app-hidden,
+#app-shell.hidden{
+  display:none !important;
+}
+
+
+/* ZERO V9.2 — botão sair lateral clicável */
+#btn-logout-lateral,
+#btn-logout-topo,
+.logout-trigger,
+.cm-logout-btn{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  position:relative !important;
+  z-index:999999 !important;
+  opacity:1 !important;
+  user-select:none !important;
+}
+
+.cm-logout-area{
+  pointer-events:auto !important;
+  position:relative !important;
+  z-index:999999 !important;
+}
+
+body.logged-out #login-page{
+  display:flex !important;
+}
+
+body.logged-out #app-shell{
+  display:none !important;
+}
+
+
+/* ZERO V9.3 — login após logout */
+body.logged-in #app-shell{
+  display:flex !important;
+}
+body.logged-in #login-page{
+  display:none !important;
+}
+body.logged-out #app-shell{
+  display:none !important;
+}
+body.logged-out #login-page{
+  display:flex !important;
+}
+#login-page.hidden{
+  display:none !important;
+}
+#app-shell.app-hidden{
+  display:none !important;
+}
+body.logged-in #app-shell:not(.app-hidden){
+  display:flex !important;
+}
+
+
+/* ZERO V9.4 — Receita/medicamentos mais estáveis */
+.receita-original-lista,
+#rec-meds-lista-original{
+  min-height:64px !important;
+  contain:layout paint !important;
+}
+.receita-original-med{
+  transition:none !important;
+  animation:none !important;
+}
+.med-period-current{
+  min-height:34px !important;
+}
+
+
+/* ZERO V9.5 — esconder menus sem permissão */
+[data-permission-hidden="1"],
+.route-hidden-v95{
+  display:none !important;
+}
+
+
+/* ZERO V9.6 — modais/documentos sem piscar */
+#modal-root.modal-switching-v96{
+  visibility:hidden !important;
+}
+.stable-modal-v96,
+.stable-modal-backdrop-v96,
+.modal,
+.modal-backdrop{
+  transition:none !important;
+  animation:none !important;
+}
+.receita-original-lista,
+#rec-meds-lista-original{
+  min-height:64px !important;
+  contain:layout paint !important;
+}
+.receita-original-med{
+  transition:none !important;
+  animation:none !important;
+}
+.med-period-current{
+  min-height:34px !important;
+}
+
+
+/* ZERO V9.7 — estabilização reforçada dos modais clínicos */
+#modal-root.modal-switching-v97{
+  visibility:hidden !important;
+}
+.modal,
+.modal-backdrop,
+.stable-modal-v96,
+.stable-modal-backdrop-v96{
+  transition:none !important;
+  animation:none !important;
+}
+.receita-original-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:0 0 12px;
+}
+.receita-original-head label{
+  font-weight:800;
+  color:#334155;
+  margin:0;
+}
+#rec-meds-lista-original,
+.receita-original-lista{
+  min-height:72px !important;
+  contain:layout paint !important;
+}
+.receita-original-med,
+.period-modal-opt,
+.med-period-current{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+/* ZERO V9.8 — tela de login estável */
+body.app-login-switching-v98 #app-shell,
+body.app-login-switching-v98 #login-page{
+  transition:none !important;
+  animation:none !important;
+}
+body.app-login-switching-v98 #app-shell{
+  visibility:hidden !important;
+}
+#app-shell,
+#login-page{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+/* ZERO V9.9 — estabilidade de modais em todos os perfis */
+#modal-root.modal-switching-v99,
+#modal-root.modal-switching-v96,
+#modal-root.modal-switching-v97{
+  visibility:hidden !important;
+}
+
+body.modal-open-v99 .cm-sidebar,
+body.modal-open-v99 #sidebar,
+body.modal-open-v99 .nav,
+body.modal-open-v99 .topbar,
+body.modal-open-v99 .main,
+body.modal-open-v99 #content{
+  transition:none !important;
+  animation:none !important;
+}
+
+body.modal-freeze-v99 .cm-sidebar *,
+body.modal-freeze-v99 #sidebar *,
+body.modal-freeze-v99 .nav *,
+body.modal-freeze-v99 .topbar *,
+body.modal-freeze-v99 #content *{
+  transition:none !important;
+  animation:none !important;
+}
+
+.stable-modal-v99,
+.stable-modal-backdrop-v99,
+.modal,
+.modal-backdrop,
+.modal-title,
+.modal-body,
+.modal-footer{
+  transition:none !important;
+  animation:none !important;
+}
+
+.modal-body{
+  contain:layout paint !important;
+}
+
+#rec-meds-lista-original,
+.receita-original-lista,
+.doc-modal-original,
+.form-grid,
+.med-form-grid{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+/* ZERO V10.0 — Atestado Médico */
+#at-motivo{
+  line-height:1.55 !important;
+}
+
+
+/* ZERO V10.1 — Agenda chegou/fila */
+.ag-slot-print.status-aguardando{
+  border-color:#f59e0b !important;
+  background:#fffbeb !important;
+}
+.ag-atender-btn{
+  background:#16a34a !important;
+  color:#fff !important;
+}
+.ag-chegou-btn{
+  cursor:pointer !important;
+  pointer-events:auto !important;
+}
+
+
+/* ZERO V10.2 — Fila atual tipo/profissional/status */
+.fila-tipo-badge{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:12px;
+  font-weight:1000;
+  background:#eff6ff;
+  color:#1d4ed8;
+  border:1px solid #bfdbfe;
+}
+.fila-tipo-badge.tipo-procedimento{
+  background:#f5f3ff;
+  color:#6d28d9;
+  border-color:#ddd6fe;
+}
+.fila-tipo-badge.tipo-retorno{
+  background:#ecfdf5;
+  color:#047857;
+  border-color:#a7f3d0;
+}
+
+
+/* ZERO V10.3 — Relatórios oculto para perfis sem permissão */
+[data-route="relatorios"][data-permission-hidden="1"]{
+  display:none !important;
+}
+
+
+/* ZERO V10.6 — documentos no registrar consulta preservados */
+#docs-novo-registro-lista,
+#nc-anexos-exames-lista{
+  min-height:24px;
+}
+
+
+/* ZERO V10.8 — não mostra Registrar Consulta vazio durante restauração */
+body.registrar-consulta-restoring-v108 #modal-root{
+  visibility:hidden !important;
+}
+body.registrar-consulta-restoring-v108 #modal-root *,
+body.registrar-consulta-restoring-v108 .modal,
+body.registrar-consulta-restoring-v108 .modal-body{
+  transition:none !important;
+  animation:none !important;
+}
+#docs-novo-registro-lista .doc-card{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+/* ZERO V10.9 — botões salvar atendimento clicáveis */
+.btn-registro-manter,
+.btn-registro-finalizar{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+
+
+/* ZERO V11.0 — Registrar Consulta sem piscar */
+body.rc-no-blink-v110 #modal-root,
+body.rc-no-blink-v110 #modal-root *{
+  transition:none !important;
+  animation:none !important;
+}
+.btn-registro-manter,
+.btn-registro-finalizar{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  position:relative !important;
+  z-index:5 !important;
+}
+#docs-novo-registro-lista{
+  min-height:0 !important;
+}
+
+
+/* ZERO V11.1 — reabrir Registrar Consulta com rascunho sem piscar */
+body.rc-restoring-draft-v111 #modal-root{
+  visibility:hidden !important;
+}
+body.rc-restoring-draft-v111 #modal-root *,
+body.rc-restoring-draft-v111 .modal,
+body.rc-restoring-draft-v111 .modal-body{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+/* ZERO V11.2 — botões receita/atestado */
+.btn-purple,.btn-green,.btn-outline{
+  pointer-events:auto;
+}
+
+
+/* ZERO V11.3 — X dos modais internos */
+#modal-root .modal-title .modal-x{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+
+
+/* ZERO V11.4 — cancelar atendimento no Registrar Consulta */
+.btn-registro-cancelar{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+
+
+/* ZERO V11.5 — cancelar mantém na fila */
+.btn-registro-cancelar{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+
+
+/* ZERO V11.6 — Cancelamentos e Não aguardou */
+.btn-registro-cancelar-real,
+.btn-orange{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+.btn-orange{
+  background:#f97316 !important;
+  color:#fff !important;
+  border-color:#f97316 !important;
+}
+.fila-nao-aguardou{
+  background:#fff7ed !important;
+  color:#c2410c !important;
+  border:1px solid #fed7aa !important;
+}
+.fila-cancelado{
+  background:#fef2f2 !important;
+  color:#b91c1c !important;
+  border:1px solid #fecaca !important;
+}
+
+
+/* ZERO V11.7 — Horários por profissional */
+.prof-horarios-grid-v117{
+  display:grid;
+  gap:8px;
+}
+.prof-horario-row-v117{
+  display:grid;
+  grid-template-columns: 150px 120px 32px 120px;
+  gap:8px;
+  align-items:center;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:8px;
+}
+.prof-dia-v117{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:800;
+}
+.prof-dia-v117 input{width:auto;}
+.ag-prof-horario-info-v117,
+.ag-config-prof-msg-v117{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#eff6ff;
+  color:#1e3a8a;
+  border:1px solid #bfdbfe;
+  font-size:12px;
+  font-weight:700;
+}
+
+
+
+
+/* =========================================================
+   ZERO V11.8 — Layout profissional + Registrar Consulta
+========================================================= */
+
+/* Cadastro profissional alinhado */
+.modal-profissional-v118 .modal-body{
+  overflow-x:hidden !important;
+}
+.modal-profissional-v118 .cm-section{
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.modal-profissional-v118 .cm-form-grid,
+.modal-profissional-v118 .cm-form-grid-v118{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:14px !important;
+  align-items:start !important;
+  width:100% !important;
+}
+.modal-profissional-v118 .cm-form-grid > div,
+.modal-profissional-v118 .cm-form-grid-v118 > div{
+  min-width:0 !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.modal-profissional-v118 .cm-form-grid .span-2,
+.modal-profissional-v118 .cm-form-grid-v118 .span-2{
+  grid-column:span 2 !important;
+}
+.modal-profissional-v118 .cm-form-grid .span-3,
+.modal-profissional-v118 .cm-form-grid-v118 .span-3{
+  grid-column:span 3 !important;
+}
+.modal-profissional-v118 .cm-form-grid .span-4,
+.modal-profissional-v118 .cm-form-grid-v118 .span-4{
+  grid-column:1 / -1 !important;
+}
+.modal-profissional-v118 label{
+  display:block !important;
+  margin:0 0 6px !important;
+  line-height:1.25 !important;
+  white-space:normal !important;
+}
+.modal-profissional-v118 input,
+.modal-profissional-v118 select,
+.modal-profissional-v118 textarea{
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+}
+.modal-profissional-v118 .prof-horarios-grid-v117{
+  display:grid !important;
+  gap:10px !important;
+}
+.modal-profissional-v118 .prof-horario-row-v117{
+  grid-template-columns:minmax(130px,1fr) 120px 28px 120px !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+/* Registrar Consulta: palavras dentro dos campos */
+.modal-registrar-consulta-v118,
+.modal-registrar-consulta-v118 *{
+  box-sizing:border-box !important;
+}
+.modal-registrar-consulta-v118 .modal-body{
+  overflow-x:hidden !important;
+}
+.modal-registrar-consulta-v118 input,
+.modal-registrar-consulta-v118 select,
+.modal-registrar-consulta-v118 textarea,
+#modal-root textarea,
+#modal-root input,
+#modal-root select{
+  max-width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+}
+.modal-registrar-consulta-v118 textarea,
+#modal-root textarea{
+  width:100% !important;
+  resize:vertical !important;
+  overflow:auto !important;
+  white-space:pre-wrap !important;
+  word-break:break-word !important;
+  overflow-wrap:anywhere !important;
+  line-height:1.45 !important;
+}
+.modal-registrar-consulta-v118 .f-col,
+.modal-registrar-consulta-v118 .form-grid > div,
+.modal-registrar-consulta-v118 .cm-section,
+.modal-registrar-consulta-v118 .cm-view-item,
+.modal-registrar-consulta-v118 .doc-card,
+.modal-registrar-consulta-v118 .anamnese-card,
+.modal-registrar-consulta-v118 .soap-card,
+.modal-registrar-consulta-v118 .doc-original-banner{
+  min-width:0 !important;
+  max-width:100% !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+}
+.modal-registrar-consulta-v118 .form-grid,
+.modal-registrar-consulta-v118 .cm-form-grid,
+.modal-registrar-consulta-v118 .anamnese-grid{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) !important;
+  gap:14px !important;
+  align-items:start !important;
+}
+.modal-registrar-consulta-v118 .f-full,
+.modal-registrar-consulta-v118 .span-4,
+.modal-registrar-consulta-v118 .full{
+  grid-column:1 / -1 !important;
+}
+.modal-registrar-consulta-v118 label{
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+}
+.modal-registrar-consulta-v118 .row,
+.modal-registrar-consulta-v118 .row.gap{
+  flex-wrap:wrap !important;
+}
+#docs-novo-registro-lista,
+#docs-novo-registro-lista *{
+  max-width:100% !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+  .modal-profissional-v118 .cm-form-grid,
+  .modal-profissional-v118 .cm-form-grid-v118{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .modal-profissional-v118 .cm-form-grid .span-3,
+  .modal-profissional-v118 .cm-form-grid-v118 .span-3{
+    grid-column:1 / -1 !important;
+  }
+}
+@media (max-width: 640px){
+  .modal-profissional-v118 .cm-form-grid,
+  .modal-profissional-v118 .cm-form-grid-v118,
+  .modal-registrar-consulta-v118 .form-grid,
+  .modal-registrar-consulta-v118 .cm-form-grid,
+  .modal-registrar-consulta-v118 .anamnese-grid{
+    grid-template-columns:1fr !important;
+  }
+  .modal-profissional-v118 .prof-horario-row-v117{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   ZERO V11.9 — Alinhamento real dos campos do profissional
+   Corrige o print: labels de 1 ou 2 linhas não empurram os inputs.
+========================================================= */
+#modal-root .modal-profissional-v119{
+  max-width: 860px !important;
+}
+
+#modal-root .modal-profissional-v119 .modal-body{
+  overflow-x:hidden !important;
+}
+
+#modal-root .modal-profissional-v119 .cm-section{
+  padding:16px !important;
+  border-radius:14px !important;
+}
+
+#modal-root .modal-profissional-v119 .cm-form-grid,
+#modal-root .modal-profissional-v119 .cm-form-grid-v119{
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  gap:14px 16px !important;
+  align-items:start !important;
+  width:100% !important;
+}
+
+#modal-root .modal-profissional-v119 .cm-form-grid > div,
+#modal-root .modal-profissional-v119 .cm-form-grid-v119 > div,
+#modal-root .modal-profissional-v119 .prof-field-v119{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  min-width:0 !important;
+  width:100% !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+
+#modal-root .modal-profissional-v119 .cm-form-grid .span-2,
+#modal-root .modal-profissional-v119 .cm-form-grid .span-3,
+#modal-root .modal-profissional-v119 .cm-form-grid .span-4,
+#modal-root .modal-profissional-v119 .cm-form-grid-v119 .span-2,
+#modal-root .modal-profissional-v119 .cm-form-grid-v119 .span-3,
+#modal-root .modal-profissional-v119 .cm-form-grid-v119 .span-4{
+  grid-column:1 / -1 !important;
+}
+
+/* Label com altura fixa para alinhar o topo dos inputs, mesmo quando quebra linha */
+#modal-root .modal-profissional-v119 label{
+  display:flex !important;
+  align-items:flex-end !important;
+  min-height:34px !important;
+  line-height:1.15 !important;
+  margin:0 0 7px !important;
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+  word-break:normal !important;
+  font-size:13px !important;
+}
+
+/* Inputs/selects sempre iguais */
+#modal-root .modal-profissional-v119 input,
+#modal-root .modal-profissional-v119 select{
+  height:46px !important;
+  min-height:46px !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+  align-self:stretch !important;
+}
+
+#modal-root .modal-profissional-v119 textarea{
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+  align-self:stretch !important;
+  resize:vertical !important;
+}
+
+/* Horários do profissional alinhados */
+#modal-root .modal-profissional-v119 .prof-horarios-grid-v117{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:10px !important;
+}
+
+#modal-root .modal-profissional-v119 .prof-horario-row-v117{
+  display:grid !important;
+  grid-template-columns: minmax(150px, 1fr) 130px 30px 130px !important;
+  align-items:center !important;
+  gap:10px !important;
+  width:100% !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+
+#modal-root .modal-profissional-v119 .prof-horario-row-v117 label{
+  min-height:0 !important;
+  margin:0 !important;
+  align-items:center !important;
+}
+
+/* Campos menores que precisam ficar alinhados sem apertar */
+#modal-root .modal-profissional-v119 #prof-tipo,
+#modal-root .modal-profissional-v119 #prof-uf,
+#modal-root .modal-profissional-v119 #prof-num{
+  width:100% !important;
+}
+
+/* Em tela menor vira uma coluna */
+@media (max-width: 720px){
+  #modal-root .modal-profissional-v119 .cm-form-grid,
+  #modal-root .modal-profissional-v119 .cm-form-grid-v119{
+    grid-template-columns:1fr !important;
+  }
+
+  #modal-root .modal-profissional-v119 label{
+    min-height:auto !important;
+  }
+
+  #modal-root .modal-profissional-v119 .prof-horario-row-v117{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+
+
+
+
+/* ZERO V12.0 — Card últimos sinais vitais no Registrar Consulta */
+.rc-last-vitals{
+  grid-column:1 / -1 !important;
+  width:100% !important;
+  background:#fff7ed !important;
+  border:1px solid #fed7aa !important;
+  border-radius:14px !important;
+  padding:12px !important;
+  box-sizing:border-box !important;
+  margin:0 0 10px !important;
+}
+.rc-last-vitals-title{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  margin-bottom:8px !important;
+  color:#7c2d12 !important;
+}
+.rc-last-vitals-title small{
+  font-weight:800 !important;
+  color:#9a3412 !important;
+}
+.rc-last-vitals-grid{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(110px,1fr)) !important;
+  gap:8px !important;
+}
+.rc-last-vitals-grid div{
+  background:#fff !important;
+  border:1px solid #ffedd5 !important;
+  border-radius:10px !important;
+  padding:8px !important;
+  min-width:0 !important;
+}
+.rc-last-vitals-grid span{
+  display:block !important;
+  font-size:11px !important;
+  font-weight:800 !important;
+  color:#9a3412 !important;
+}
+.rc-last-vitals-grid strong{
+  display:block !important;
+  font-size:14px !important;
+  color:#1f2937 !important;
+  overflow-wrap:anywhere !important;
+}
+.rc-last-vitals-muted{
+  color:#9a3412 !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+}
+
+
+
+
+/* ZERO V12.1 — Ativar/desativar assinatura profissional */
+.prof-assinatura-toggle-v121 select{
+  width:100% !important;
+}
+.prof-assinatura-help-v121{
+  margin-top:6px;
+  font-size:11px;
+  line-height:1.35;
+  color:#64748b;
+  font-weight:700;
+}
+.assinatura-status-v121{
+  margin-top:12px;
+}
+
+
+
+
+/* ZERO V12.2 — Agendas entram estáveis e sem aviso de horário */
+.ag-prof-horario-info-v117,
+.ag-config-prof-msg-v117{
+  display:none !important;
+}
+
+body.agenda-rendering-stable-v122 #content{
+  visibility:hidden !important;
+}
+
+body.agenda-rendering-stable-v122 #content *,
+body.agenda-rendering-stable-v122 .ag-print-layout,
+body.agenda-rendering-stable-v122 .ag-card,
+body.agenda-rendering-stable-v122 .ag-slots-wrap{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V12.3 — Checkbox dos horários do profissional no tamanho normal
+========================================================= */
+#modal-root .modal-profissional-v119 .prof-horario-row-v117 input[type="checkbox"],
+#modal-root .modal-profissional-v118 .prof-horario-row-v117 input[type="checkbox"],
+.prof-horario-row-v117 input[type="checkbox"],
+.prof-dia-v117 input[type="checkbox"]{
+  width:16px !important;
+  height:16px !important;
+  min-width:16px !important;
+  max-width:16px !important;
+  min-height:16px !important;
+  max-height:16px !important;
+  padding:0 !important;
+  margin:0 8px 0 0 !important;
+  transform:none !important;
+  zoom:1 !important;
+  appearance:auto !important;
+  -webkit-appearance:checkbox !important;
+  accent-color:#2563eb;
+  flex:0 0 16px !important;
+  display:inline-block !important;
+  vertical-align:middle !important;
+}
+
+#modal-root .modal-profissional-v119 .prof-dia-v117,
+#modal-root .modal-profissional-v118 .prof-dia-v117,
+.prof-dia-v117{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  gap:6px !important;
+  min-height:auto !important;
+  height:auto !important;
+  margin:0 !important;
+  line-height:1.2 !important;
+}
+
+#modal-root .modal-profissional-v119 .prof-horario-row-v117,
+#modal-root .modal-profissional-v118 .prof-horario-row-v117,
+.prof-horario-row-v117{
+  min-height:46px !important;
+  padding:8px 10px !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V12.4 — Estilo compacto sinais vitais + ajustes campos
+========================================================= */
+.rc-last-vitals{
+  background:#e6fffb !important;
+  border:1px solid #5eead4 !important;
+  color:#111827 !important;
+  padding:10px 12px !important;
+  min-height:auto !important;
+}
+.rc-last-vitals-title{
+  color:#111827 !important;
+  margin-bottom:8px !important;
+}
+.rc-last-vitals-title strong,
+.rc-last-vitals-title small{
+  color:#111827 !important;
+}
+.rc-last-vitals-grid{
+  grid-template-columns:repeat(5,minmax(92px,1fr)) !important;
+  gap:8px !important;
+}
+.rc-last-vitals-grid div{
+  background:#fff !important;
+  border:1px solid #99f6e4 !important;
+  padding:7px 8px !important;
+  min-height:48px !important;
+}
+.rc-last-vitals-grid span{
+  color:#0f766e !important;
+}
+.rc-last-vitals-grid strong{
+  color:#111827 !important;
+}
+.rc-atendimento-extra-v124 textarea{
+  min-height:52px !important;
+}
+.ag-valor-card-v124{
+  background:#ecfeff !important;
+  color:#0f766e !important;
+  border:1px solid #99f6e4 !important;
+}
+@media(max-width:900px){
+  .rc-last-vitals-grid{grid-template-columns:repeat(3,minmax(92px,1fr)) !important;}
+}
+
+
+
+
+/* ZERO V12.5 — Estabilização Atender / Chegou */
+body.registrar-open-stable-v125 #modal-root{
+  visibility:hidden !important;
+}
+body.registrar-open-stable-v125 #modal-root *,
+body.fila-atender-stable-v125 #content *,
+body.agenda-chegou-stable-v125 #content *{
+  transition:none !important;
+  animation:none !important;
+}
+body.fila-atender-stable-v125 #content{
+  pointer-events:none !important;
+}
+body.agenda-chegou-stable-v125 #content{
+  pointer-events:none !important;
+}
+.ag-slot-print.ag-chegou-estavel-v125{
+  transition:none !important;
+  animation:none !important;
+  outline:2px solid #16a34a22;
+}
+.ag-chegou-btn.disabled,
+.ag-chegou-btn:disabled{
+  opacity:.7 !important;
+  cursor:not-allowed !important;
+}
+
+
+
+
+/* ZERO V12.7 — trocar data nas agendas sem esconder/piscar */
+body.agenda-rendering-stable-v122 #content,
+body.agenda-no-blink-v127 #content,
+body.agenda-chegou-stable-v125 #content{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+body.agenda-rendering-stable-v122 #content *,
+body.agenda-no-blink-v127 #content *,
+body.agenda-chegou-stable-v125 #content *,
+.agenda-content-stable-v127,
+.agenda-content-stable-v127 *{
+  transition:none !important;
+  animation:none !important;
+}
+
+.agenda-content-stable-v127{
+  backface-visibility:hidden;
+  transform:translateZ(0);
+}
+
+
+
+
+/* ZERO V12.8 — botão Salvar Nova Consulta clicável */
+#modal-root .modal-footer button,
+#modal-root .modal-footer .btn{
+  pointer-events:auto !important;
+  cursor:pointer;
+}
+
+
+
+
+/* =========================================================
+   ZERO V12.9 — Estabilização geral dos modais
+========================================================= */
+
+/* Anula regras antigas que escondiam/mostravam e causavam piscada */
+#modal-root.modal-switching-v96,
+#modal-root.modal-switching-v97,
+#modal-root.modal-switching-v99{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+/* Enquanto o modal está sendo montado, esconde só o modal novo.
+   Ele aparece já pronto, sem ver campos pulando. */
+#modal-root.modal-stabilizing-v129 .modal-backdrop{
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+
+#modal-root .stable-modal-v129,
+#modal-root .stable-modal-backdrop-v129,
+#modal-root .modal,
+#modal-root .modal-backdrop,
+#modal-root .modal *,
+#modal-root .modal-backdrop *{
+  transition:none !important;
+  animation:none !important;
+}
+
+#modal-root .modal-ready-v129{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+body.modal-stabilizing-body-v129 #content,
+body.modal-open-v99 #content{
+  transition:none !important;
+  animation:none !important;
+}
+
+/* Mantém o modal no tamanho estável e evita "pulo" quando campos são injetados */
+#modal-root .modal{
+  contain:layout paint !important;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+
+#modal-root .modal-body{
+  min-width:0 !important;
+  overflow-x:hidden !important;
+}
+
+#modal-root .modal-body *,
+#modal-root .modal-footer *{
+  box-sizing:border-box !important;
+}
+
+#modal-root input,
+#modal-root select,
+#modal-root textarea{
+  max-width:100% !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V13.0 — Card Queixa/Motivo e Observação igual Sinais Vitais
+========================================================= */
+.rc-queixa-obs-card-v130{
+  grid-column:1 / -1 !important;
+  width:100% !important;
+  background:#e6fffb !important;
+  border:1px solid #5eead4 !important;
+  border-radius:14px !important;
+  padding:10px 12px !important;
+  box-sizing:border-box !important;
+  margin:0 0 10px !important;
+  color:#111827 !important;
+}
+
+.rc-queixa-obs-title-v130{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  margin-bottom:8px !important;
+  color:#111827 !important;
+}
+
+.rc-queixa-obs-title-v130 strong{
+  color:#111827 !important;
+}
+
+.rc-queixa-obs-grid-v130{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:8px !important;
+  width:100% !important;
+}
+
+.rc-queixa-obs-box-v130{
+  background:#fff !important;
+  border:1px solid #99f6e4 !important;
+  border-radius:10px !important;
+  padding:8px !important;
+  min-width:0 !important;
+}
+
+.rc-queixa-obs-box-v130 span{
+  display:block !important;
+  font-size:11px !important;
+  font-weight:800 !important;
+  color:#0f766e !important;
+  margin-bottom:5px !important;
+}
+
+.rc-queixa-obs-box-v130 textarea{
+  width:100% !important;
+  min-height:54px !important;
+  max-height:96px !important;
+  resize:vertical !important;
+  border:1px solid #d1fae5 !important;
+  border-radius:8px !important;
+  padding:8px !important;
+  color:#111827 !important;
+  background:#fff !important;
+  font-size:13px !important;
+  line-height:1.35 !important;
+  box-sizing:border-box !important;
+}
+
+@media(max-width:760px){
+  .rc-queixa-obs-grid-v130{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+
+
+/* ZERO V13.1 — Periodicidade personalizada mais visível */
+#period-personalizado-box,
+#med-personalizado-box{
+  background:#ecfeff !important;
+  border:1px solid #99f6e4 !important;
+  border-radius:12px !important;
+  padding:10px !important;
+}
+#period-personalizado-texto,
+#med-periodicidade-personalizada{
+  width:100% !important;
+}
+
+
+
+
+/* ZERO V13.2 — botão colocar na fila protegido */
+#btn-colocar-fila-v132:disabled{
+  opacity:.65 !important;
+  cursor:not-allowed !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V13.3 — Submodais clínicos sem piscar
+========================================================= */
+#modal-root.modal-stabilizing-v129 .modal-backdrop,
+#modal-root.modal-switching-v96,
+#modal-root.modal-switching-v97,
+#modal-root.modal-switching-v99{
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+}
+
+#modal-root .modal-layer-v133,
+#modal-root .stable-modal-v133,
+#modal-root .stable-modal-backdrop-v133,
+#modal-root .modal-layer-v133 *,
+#modal-root .stable-modal-v133 *{
+  transition:none !important;
+  animation:none !important;
+}
+
+#modal-root .modal-under-v133{
+  pointer-events:none !important;
+}
+
+#modal-root .modal-under-v133 .modal{
+  filter:none !important;
+  opacity:1 !important;
+}
+
+#modal-root .modal-layer-v133 .modal{
+  transform:translateZ(0);
+  backface-visibility:hidden;
+  contain:layout paint;
+}
+
+.rc-queixa-obs-readonly-v133 .rc-queixa-obs-box-v130{
+  min-height:70px !important;
+}
+
+.rc-readonly-text-v133{
+  width:100% !important;
+  min-height:44px !important;
+  border:1px solid #d1fae5 !important;
+  border-radius:8px !important;
+  padding:8px !important;
+  color:#111827 !important;
+  background:#f8fffe !important;
+  font-size:13px !important;
+  line-height:1.35 !important;
+  box-sizing:border-box !important;
+  white-space:normal !important;
+}
+
+
+/* =========================================================
+   ZERO V13.4 — Ajustes visuais finais
+========================================================= */
+.rc-check-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  grid-auto-rows:1fr !important;
+}
+.rc-check{
+  min-height:52px !important;
+  height:100% !important;
+  align-items:flex-start !important;
+  padding:10px 12px !important;
+}
+.rc-check input{
+  width:16px !important;
+  height:16px !important;
+  flex:0 0 16px !important;
+  margin-top:2px !important;
+}
+.hist-original-card-v134{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  border:1px solid #dbe3ef;background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:10px;
+}
+.hist-original-main-v134{display:grid;gap:4px;min-width:260px;}
+.hist-original-date-v134{font-size:13px;color:#64748b;font-weight:700;}
+.hist-original-type-v134{font-size:18px;color:#0f172a;font-weight:800;}
+.hist-original-cid-v134{font-size:13px;color:#334155;}
+.hist-original-actions-v134{display:flex;gap:8px;flex-wrap:wrap;}
+.ag-slot-print .ag-slot-time,.ag-slot-print .ag-slot-info strong,.ag-slot-print .ag-slot-info span{color:inherit !important;}
+.ag-slot-print .ag-mini-tag{background:rgba(255,255,255,.18) !important;color:inherit !important;border-color:rgba(255,255,255,.28) !important;}
+.ag-slot-print[style*='22'] .ag-mini-tag,.ag-slot-print[style*='14'] .ag-mini-tag{background:rgba(255,255,255,.75) !important;color:#0f172a !important;border-color:rgba(15,23,42,.08) !important;}
+#modal-root .modal-backdrop,#modal-root .modal,#modal-root .modal *{transition:none !important;animation:none !important;}
+#modal-root .modal-under-v133{opacity:1 !important;visibility:visible !important;display:flex !important;}
+.rc-queixa-obs-readonly-v133 .rc-readonly-text-v133{min-height:58px !important;}
+
+
+
+
+/* =========================================================
+   ZERO V13.5 — CSS anti-piscada total dos modais clínicos
+========================================================= */
+#modal-root,
+#modal-root.modal-switching-v96,
+#modal-root.modal-switching-v97,
+#modal-root.modal-switching-v99,
+#modal-root.modal-stabilizing-v129{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+#modal-root.modal-stabilizing-v129 .modal-backdrop,
+#modal-root .modal-backdrop,
+#modal-root .modal-layer-v135{
+  visibility:visible !important;
+  opacity:1 !important;
+  display:flex !important;
+}
+
+#modal-root .modal-layer-v135,
+#modal-root .modal-layer-v135 *,
+#modal-root .modal-ready-v135,
+#modal-root .modal-ready-v135 *,
+body.modal-clinico-stack-v135 #content,
+body.modal-clinico-stack-v135 #content *{
+  transition:none !important;
+  animation:none !important;
+}
+
+#modal-root .modal-ready-v135{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:translateZ(0) !important;
+  backface-visibility:hidden !important;
+  contain:layout paint !important;
+}
+
+#modal-root .modal-layer-v135:not(:last-child){
+  pointer-events:none !important;
+}
+
+body.modal-clinico-stack-v135 #content{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* impede “flash” branco no empilhamento */
+#modal-root .modal-backdrop{
+  background:rgba(15,23,42,.55) !important;
+}
+#modal-root .modal-layer-v135:not(:last-child){
+  background:rgba(15,23,42,.32) !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V13.6 — Visual original do histórico + ações da fila
+========================================================= */
+.hist-original-visual-v136{
+  border:1px solid #dbe3ef !important;
+  background:#fff !important;
+  border-radius:14px !important;
+  padding:14px 16px !important;
+  margin-bottom:10px !important;
+  box-shadow:0 1px 2px rgba(15,23,42,.04) !important;
+}
+
+.hist-original-visual-v136 .hist-consulta-head{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:14px !important;
+  flex-wrap:wrap !important;
+}
+
+.hist-original-visual-v136 .hist-consulta-title{
+  font-size:18px !important;
+  font-weight:900 !important;
+  color:#0f172a !important;
+}
+
+.hist-original-visual-v136 .hist-consulta-meta,
+.hist-original-visual-v136 .hist-consulta-cid-v136{
+  font-size:13px !important;
+  color:#64748b !important;
+  margin-top:3px !important;
+}
+
+.hist-original-visual-v136 .hist-consulta-cid-v136 strong{
+  color:#334155 !important;
+}
+
+.hist-original-visual-v136 .hist-consulta-actions{
+  display:flex !important;
+  gap:8px !important;
+  flex-wrap:wrap !important;
+  justify-content:flex-end !important;
+}
+
+.fila-actions-v136{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  flex-wrap:wrap !important;
+  gap:6px !important;
+  min-width:340px !important;
+}
+
+.fila-table-v136 td{
+  vertical-align:middle !important;
+}
+
+.fila-table-v136 th:last-child,
+.fila-table-v136 td:last-child{
+  text-align:right !important;
+}
+
+
+
+
+/* ZERO V13.7 — camadas de submodal sempre visíveis e sem piscar */
+#modal-root,
+#modal-root.modal-stabilizing-v129,
+#modal-root.modal-switching-v96,
+#modal-root.modal-switching-v97,
+#modal-root.modal-switching-v99{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+#modal-root > .modal-backdrop,
+#modal-root .modal-layer-v137,
+#modal-root .modal-layer-v137 .modal{
+  opacity:1 !important;
+  visibility:visible !important;
+  transition:none !important;
+  animation:none !important;
+}
+
+#modal-root > .modal-backdrop:not(:last-child){
+  pointer-events:none !important;
+  background:rgba(15,23,42,.30) !important;
+}
+
+#modal-root > .modal-backdrop:last-child{
+  pointer-events:auto !important;
+  background:rgba(15,23,42,.55) !important;
+}
+
+
+
+
+/* ZERO V13.8 — ações da fila iguais ao print original */
+.fila-actions-original-v138{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:8px !important;
+  flex-wrap:nowrap !important;
+  min-width:350px !important;
+}
+
+.fila-table-v138 th.acoes-col-v138,
+.fila-table-v138 td:last-child{
+  text-align:right !important;
+  min-width:360px !important;
+}
+
+.fila-actions-original-v138 .btn{
+  white-space:nowrap !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V13.9 — Agenda configuração sem piscar + cards legíveis
+========================================================= */
+
+/* A configuração da agenda não pode esconder a tela nem o modal */
+body.agenda-config-no-blink-v139 #content,
+body.agenda-config-no-blink-v139 #content *,
+body.agenda-config-no-blink-v139 #modal-root,
+body.agenda-config-no-blink-v139 #modal-root *{
+  transition:none !important;
+  animation:none !important;
+}
+
+body.agenda-config-no-blink-v139 #content,
+body.agenda-config-no-blink-v139 #modal-root,
+#modal-root.modal-stabilizing-v129,
+#modal-root.modal-switching-v96,
+#modal-root.modal-switching-v97,
+#modal-root.modal-switching-v99{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+/* Cards da agenda sempre legíveis: cor aparece na faixa lateral, texto preto */
+.ag-slot-print{
+  background:#fff !important;
+  color:#0f172a !important;
+  border:1px solid #e2e8f0 !important;
+  border-left:7px solid var(--ag-accent,#2563eb) !important;
+}
+
+.ag-slot-print *,
+.ag-slot-print .ag-slot-time,
+.ag-slot-print .ag-slot-info,
+.ag-slot-print .ag-slot-info strong,
+.ag-slot-print .ag-slot-info span,
+.ag-slot-print .ag-slot-extra,
+.ag-slot-print .ag-mini-tag{
+  color:#0f172a !important;
+}
+
+.ag-slot-print .ag-mini-tag{
+  background:#f8fafc !important;
+  border:1px solid #e2e8f0 !important;
+}
+
+.ag-slot-print .ag-round-btn{
+  color:inherit;
+}
+
+/* botões continuam com suas cores próprias */
+.ag-slot-print .ag-chegou-btn,
+.ag-slot-print .ag-editar-btn,
+.ag-slot-print .ag-cancelar-btn{
+  color:initial;
+}
+
+
+
+
+/* ZERO V14.0 — coluna Ações somente com 3 botões */
+.fila-actions-original-v140{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:8px !important;
+  flex-wrap:nowrap !important;
+  min-width:350px !important;
+}
+
+.fila-table-v140 th.acoes-col-v140,
+.fila-table-v140 td:last-child{
+  text-align:right !important;
+  min-width:360px !important;
+}
+
+.fila-actions-original-v140 .btn{
+  white-space:nowrap !important;
+}
+
+
+
+
+/* ZERO V14.1 — ações certas da fila */
+.fila-actions-certas-v141{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:8px !important;
+  flex-wrap:wrap !important;
+  min-width:430px !important;
+}
+
+.fila-table-v141 th.acoes-col-v141,
+.fila-table-v141 td:last-child{
+  text-align:right !important;
+  min-width:440px !important;
+}
+
+.fila-actions-certas-v141 .btn{
+  white-space:nowrap !important;
+}
+
+
+
+
+/* =========================================================
+   ZERO V14.2 — Agenda cards no visual original
+   Remove a alteração visual de faixa lateral/borda da V13.9.
+========================================================= */
+.ag-slot-print{
+  border-left-width:1px !important;
+  border-left-style:solid !important;
+  border-left-color:#e2e8f0 !important;
+  background:var(--card,#fff) !important;
+  color:#0f172a !important;
+}
+
+.ag-slot-print.ocupado{
+  background:#eff6ff !important;
+  border-color:#bfdbfe !important;
+}
+
+.ag-slot-print.ocupado.procedimento{
+  background:#ecfdf5 !important;
+  border-color:#bbf7d0 !important;
+}
+
+.ag-slot-print.bloqueado,
+.ag-slot-print.bloqueado-cruzado{
+  background:#f8fafc !important;
+  border-color:#cbd5e1 !important;
+}
+
+.ag-slot-print .ag-slot-time,
+.ag-slot-print .ag-slot-info,
+.ag-slot-print .ag-slot-info strong,
+.ag-slot-print .ag-slot-info span,
+.ag-slot-print .ag-slot-extra{
+  color:#0f172a !important;
+}
+
+.ag-slot-print .ag-mini-tag{
+  background:#ffffffcc !important;
+  border:1px solid #dbeafe !important;
+  color:#0f172a !important;
+}
+
+/* remove qualquer variável/fita herdada */
+.ag-slot-print[style]{
+  border-left-width:1px !important;
+}
+
+
+
+
+/* ZERO V14.3 — cards de documentos compactos */
+.doc-compact-v143{
+  margin-bottom:10px !important;
+}
+.doc-empty-card{
+  border:1px dashed #cbd5e1;
+  border-radius:12px;
+  padding:14px;
+  color:#64748b;
+  background:#f8fafc;
+}
+.doc-med-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  padding:12px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fff;
+  margin-bottom:8px;
+}
+.doc-med-main{
+  min-width:0;
+}
+
+
+
+
+/* ZERO V14.4 — seleção de exames e cards temporários */
+.exames-select-grid-v144{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  max-height:250px;
+  overflow:auto;
+  padding:8px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#f8fafc;
+}
+
+.exame-opt-v144{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:8px;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  background:#fff;
+  font-size:12.5px;
+  font-weight:700;
+  color:#0f172a;
+}
+
+.exame-opt-v144 input{
+  width:16px !important;
+  height:16px !important;
+  flex:0 0 16px !important;
+  margin-top:1px;
+}
+
+.doc-temp-card-v144{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  padding:12px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fff;
+  margin-bottom:8px;
+}
+
+.doc-temp-main-v144{min-width:0;}
+
+@media(max-width:800px){
+  .exames-select-grid-v144{grid-template-columns:1fr;}
+}
+
+
+
+
+/* ZERO V14.5 — botão Anexar Exame no menu Exames */
+.menu-exames-toolbar-v145{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
+  margin:0 0 12px;
+}
+
+
+
+
+/* ZERO V14.6 — menu Exames no formato original */
+.menu-exames-toolbar-v145{
+  display:none !important;
+}
+
+.exames-upload-original{
+  cursor:pointer;
+  border:2px dashed #bfdbfe;
+  border-radius:16px;
+  padding:22px;
+  text-align:center;
+  background:#eff6ff;
+}
+
+.exames-upload-original:hover{
+  background:#dbeafe;
+}
+
+.exames-upload-icon{
+  font-size:34px;
+  margin-bottom:6px;
+}
+
+.exames-upload-title{
+  font-weight:900;
+  color:#0f172a;
+}
+
+.exames-upload-sub{
+  color:#64748b;
+  font-size:13px;
+  margin:4px 0 10px;
+}
+
+
+
+
+/* =========================================================
+   ZERO V14.7 — Configuração da agenda sem piscar
+========================================================= */
+#agenda-config-root-v147{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  pointer-events:none;
+}
+
+#agenda-config-root-v147 .ag-config-backdrop-v147{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(15,23,42,.55);
+  pointer-events:auto;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+#agenda-config-root-v147 .ag-config-modal-v147{
+  width:min(1080px,96vw);
+  max-height:92vh;
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 30px 80px rgba(15,23,42,.35);
+  overflow:hidden;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+#agenda-config-root-v147 .ag-config-title-v147{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 18px;
+  border-bottom:1px solid #e2e8f0;
+  font-weight:1000;
+  color:#0f172a;
+}
+
+#agenda-config-root-v147 .ag-config-body-v147{
+  padding:16px;
+  overflow:auto;
+  background:#f8fafc;
+}
+
+#agenda-config-root-v147 .ag-config-footer-v147{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  padding:14px 18px;
+  border-top:1px solid #e2e8f0;
+  background:#fff;
+}
+
+#agenda-config-root-v147,
+#agenda-config-root-v147 *,
+body.agenda-config-open-v147 #content,
+body.agenda-config-open-v147 #content *{
+  transition:none !important;
+  animation:none !important;
+}
+
+body.agenda-config-open-v147 #content{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+body.agenda-config-open-v147 #modal-root.modal-switching-v96,
+body.agenda-config-open-v147 #modal-root.modal-switching-v97,
+body.agenda-config-open-v147 #modal-root.modal-switching-v99,
+body.agenda-config-open-v147 #modal-root.modal-stabilizing-v129{
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+@media(max-width:700px){
+  #agenda-config-root-v147 .ag-config-backdrop-v147{padding:8px;}
+  #agenda-config-root-v147 .ag-config-modal-v147{width:98vw;max-height:96vh;border-radius:12px;}
+}
+
+
+
+
+/* ZERO V14.8 — visualizador de anexos do menu Exames */
+.exame-viewer-v148{
+  width:100%;
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.exame-viewer-v148 img{
+  max-width:100%;
+  max-height:70vh;
+  object-fit:contain;
+  display:block;
+}
+
+.exame-viewer-v148.pdf iframe{
+  width:100%;
+  height:70vh;
+  border:0;
+  background:#fff;
+}
+
+.exame-download-box-v148{
+  text-align:center;
+  padding:34px;
+  border:1px dashed #bfdbfe;
+  border-radius:16px;
+  background:#eff6ff;
+}
+
+.exame-download-box-v148 .ico{
+  font-size:36px;
+  margin-bottom:8px;
+}
+
+
+
+
+/* ZERO V14.9 — botão excluir no menu Exames */
+.hist-consulta-actions .btn-red{
+  background:#dc2626 !important;
+  border-color:#dc2626 !important;
+  color:#fff !important;
+}
+
+
+
+
+/* ZERO V15.0 — card de anexo mostra arquivo e tipo, sem CID */
+.exame-file-info-v150{
+  margin-top:3px;
+  color:#334155;
+  font-size:13px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.exame-file-badge-v150{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 8px;
+  border-radius:999px;
+  background:#e0f2fe;
+  border:1px solid #bae6fd;
+  color:#075985;
+  font-size:11px;
+  font-weight:1000;
+}
+
+
+
+
+/* ZERO V15.1 — Config agenda sem horários semanais e profissional estável */
+.ag-config-open-v151 .ag-week-hours{
+  display:none !important;
+}
+
+.ag-config-open-v151 .ag-config-modal-card:has(.ag-week-hours){
+  display:none !important;
+}
+
+#profissionais-modal-root-v151{
+  position:fixed;
+  inset:0;
+  z-index:5100;
+  pointer-events:none;
+}
+
+#profissionais-modal-root-v151 .prof-backdrop-v151{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(15,23,42,.55);
+  pointer-events:auto;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+#profissionais-modal-root-v151 .prof-modal-v151{
+  width:min(980px,96vw);
+  max-height:92vh;
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 30px 80px rgba(15,23,42,.35);
+  overflow:hidden;
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+#profissionais-modal-root-v151 .prof-title-v151{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 18px;
+  border-bottom:1px solid #e2e8f0;
+  font-weight:1000;
+  color:#0f172a;
+}
+
+#profissionais-modal-root-v151 .prof-body-v151{
+  padding:16px;
+  overflow:auto;
+  background:#f8fafc;
+}
+
+#profissionais-modal-root-v151 .prof-footer-v151{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  padding:14px 18px;
+  border-top:1px solid #e2e8f0;
+  background:#fff;
+}
+
+#profissionais-modal-root-v151,
+#profissionais-modal-root-v151 *,
+body.prof-modal-open-v151 #content,
+body.prof-modal-open-v151 #content *{
+  transition:none !important;
+  animation:none !important;
+}
+
+body.prof-modal-open-v151 #content{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+@media(max-width:700px){
+  #profissionais-modal-root-v151 .prof-backdrop-v151{padding:8px;}
+  #profissionais-modal-root-v151 .prof-modal-v151{width:98vw;max-height:96vh;border-radius:12px;}
+}
+
+
+
+
+/* ZERO V15.2 — botão Configuração sempre abre */
+#agenda-config-root-v152{
+  position:fixed;
+  inset:0;
+  z-index:5200;
+  pointer-events:none;
+}
+
+#agenda-config-root-v152 .ag-config-backdrop-v152{
+  pointer-events:auto;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+#agenda-config-root-v152 .ag-config-modal-v152{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+#agenda-config-root-v152,
+#agenda-config-root-v152 *{
+  transition:none !important;
+  animation:none !important;
+}
+
+
+
+
+/* ZERO V15.4 — remove overlay custom antigo da configuração */
+#agenda-config-root-v147,
+#agenda-config-root-v151,
+#agenda-config-root-v152{
+  display:none !important;
+}
+
+
+
+
+/* ZERO V15.5 — cores salvas aplicadas nos cards e legenda */
+.ag-slot-print.ag-color-card-v155{
+  background:var(--ag-card-bg,#fff) !important;
+  border-color:var(--ag-card-border,#e2e8f0) !important;
+  border-left:6px solid var(--ag-card-border,#e2e8f0) !important;
+}
+
+.ag-slot-print.ag-color-card-v155 .ag-slot-time{
+  color:#0f172a !important;
+  border-color:var(--ag-card-border,#e2e8f0) !important;
+}
+
+.ag-slot-print.ag-color-card-v155 .ag-slot-info,
+.ag-slot-print.ag-color-card-v155 .ag-slot-info strong,
+.ag-slot-print.ag-color-card-v155 .ag-slot-info span{
+  color:#0f172a !important;
+}
+
+.ag-slot-print.ag-color-card-v155 .ag-mini-tag{
+  border-color:var(--ag-card-border,#dbeafe) !important;
+}
+
+
+
+
+/* ZERO V15.6 — configuração original: remove overlays customizados antigos */
+#agenda-config-root-v147,
+#agenda-config-root-v151,
+#agenda-config-root-v152{
+  display:none !important;
+}
+
+
+
+
+/* ZERO V15.7 — mensagem de cores salvas sem fechar modal */
+.cfg-cores-salvo-msg-v157{
+  display:none;
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid #bbf7d0;
+  background:#ecfdf5;
+  color:#166534;
+  font-weight:1000;
+  font-size:13px;
+}
+
+
+
+
+/* ZERO V15.8 — estabilização do modal Configurar Agenda original */
+body.agenda-config-opening-v158 #modal-root,
+body.agenda-config-estavel-v158 #modal-root{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+body.agenda-config-opening-v158 #modal-root *,
+body.agenda-config-estavel-v158 #modal-root *,
+#modal-root .agenda-config-modal-estavel-v158,
+#modal-root .agenda-config-modal-estavel-v158 *{
+  animation:none !important;
+  transition:none !important;
+}
+
+body.agenda-config-estavel-v158 #modal-root .modal,
+body.agenda-config-estavel-v158 #modal-root .modal-box,
+body.agenda-config-estavel-v158 #modal-root .modal-content,
+body.agenda-config-estavel-v158 #modal-root .cm-modal,
+body.agenda-config-estavel-v158 #modal-root .modal-backdrop{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+.agenda-config-card-v158{
+  opacity:1 !important;
+  transform:none !important;
+}
+
+
+
+
+/* ZERO V16.2 — Receita medicamento/periodicidade estável */
+.receita-toolbar-v162{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:0 0 12px;
+}
+.receita-toolbar-v162 label{
+  font-weight:800;
+  color:#334155;
+  margin:0;
+}
+.receita-med-card-v162{
+  border-left:4px solid #22c55e;
+}
+.period-original-v162{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.period-original-v162 .period-modal-opt{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #dbeafe;
+  border-radius:12px;
+  padding:10px 12px;
+  background:#fff;
+  font-weight:800;
+  color:#1e293b;
+}
+.period-original-v162 .period-modal-opt input{
+  width:16px;
+  height:16px;
+}
+.med-modal-v162 .med-period-current{
+  min-height:38px;
+  display:flex;
+  align-items:center;
+}
+
+
+
+
+/* ZERO V16.3 — botão selecionar arquivo continua clicável */
+.exames-upload-original,
+.exames-upload-original button{
+  pointer-events:auto !important;
+}
+
+
+
+
+/* ZERO V16.4 — grids e cards dos documentos do atendimento corrigidos */
+#modal-root .form-grid,
+#modal-root .cm-form-grid,
+#modal-root .doc-grid-fix-v164{
+  min-width:0 !important;
+}
+#modal-root .form-grid > *,
+#modal-root .cm-form-grid > *,
+#modal-root .doc-grid-fix-v164 > *,
+#modal-root .f-col,
+#modal-root .span-2,
+#modal-root .span-3,
+#modal-root .span-4,
+#modal-root .f-full{
+  min-width:0 !important;
+  max-width:100% !important;
+}
+#modal-root input,
+#modal-root select,
+#modal-root textarea{
+  max-width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+}
+#modal-root label,
+#modal-root .doc-sub,
+#modal-root .hist-consulta-title,
+#modal-root .doc-temp-main-v164{
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+}
+.doc-temp-card-v164{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fff;
+  margin-bottom:8px;
+}
+.doc-temp-main-v164{min-width:0;flex:1;}
+.doc-actions-v164{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:6px;
+  max-width:360px;
+}
+.doc-view-v164{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:16px;
+  line-height:1.55;
+  overflow-wrap:anywhere;
+}
+.doc-view-item-v164,
+.doc-view-item{
+  border:1px solid #eef2f7;
+  border-radius:10px;
+  padding:10px;
+  margin:8px 0;
+  background:#f8fafc;
+}
+@media(max-width:760px){
+  .doc-temp-card-v164{flex-direction:column;}
+  .doc-actions-v164{justify-content:flex-start;max-width:100%;}
+}
+
+
+
+
+/* ZERO V16.5 — botões dos cards como ícones compactos */
+.doc-actions-icons-v165{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:6px !important;
+  flex-wrap:wrap !important;
+}
+
+.doc-icon-btn-v165{
+  width:34px !important;
+  min-width:34px !important;
+  height:34px !important;
+  min-height:34px !important;
+  padding:0 !important;
+  border-radius:10px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:15px !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.doc-temp-card-v165{
+  align-items:center !important;
+}
+
+@media(max-width:720px){
+  .doc-actions-icons-v165{
+    justify-content:flex-start !important;
+  }
+}
+
+
+
+
+/* ZERO V16.6 — reforço visual do card de exame anexado no Registrar Consulta */
+.doc-temp-card-v166{
+  width:100%;
+  min-width:0;
+}
+
+
+
+
+/* ZERO V16.7 — estabilidade dos modais de documentos clínicos */
+body.doc-modal-estavel-v167 #modal-root,
+body.doc-modal-estavel-v167 #modal-root *{
+  animation:none !important;
+  transition:none !important;
+}
+
+body.doc-modal-estavel-v167 #modal-root .modal,
+body.doc-modal-estavel-v167 #modal-root .modal-box,
+body.doc-modal-estavel-v167 #modal-root .modal-content,
+body.doc-modal-estavel-v167 #modal-root .cm-modal,
+body.doc-modal-estavel-v167 #modal-root .modal-backdrop{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+.doc-grid-fix-v167,
+.doc-grid-fix-v167 .form-grid{
+  min-width:0 !important;
+}
+
+.doc-grid-fix-v167 input,
+.doc-grid-fix-v167 textarea,
+.doc-grid-fix-v167 select,
+.doc-modal-original input,
+.doc-modal-original textarea,
+.doc-modal-original select{
+  max-width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+}
+
+.doc-modal-estavel-node-v167 .modal-footer,
+body.doc-modal-estavel-v167 #modal-root .modal-footer,
+body.doc-modal-estavel-v167 #modal-root .cm-modal-footer{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:8px !important;
+  justify-content:flex-end !important;
+}
+
+
+
+
+/* ZERO V16.8 — Receita/Medicamento sem piscar */
+body.receita-modal-sem-piscar-v168 #modal-root,
+#modal-root.receita-modal-root-v168{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+body.receita-modal-sem-piscar-v168 #modal-root *,
+#modal-root.receita-modal-root-v168 *{
+  animation:none !important;
+  transition:none !important;
+}
+body.receita-modal-sem-piscar-v168 #modal-root .modal,
+body.receita-modal-sem-piscar-v168 #modal-root .modal-backdrop,
+body.receita-modal-sem-piscar-v168 #modal-root .modal-body,
+body.receita-modal-sem-piscar-v168 #modal-root .modal-footer{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+.receita-original-lista{
+  min-height:58px;
+}
+.receita-med-card-v162{
+  animation:none !important;
+  transition:none !important;
+}
+
+
+
+
+/* ZERO V17.0 — camada de visualização que não fecha Registrar Consulta */
+#doc-viewer-layer-v170{
+  position:fixed;
+  inset:0;
+  z-index:999999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.doc-viewer-backdrop-v170{
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.55);
+  backdrop-filter:blur(2px);
+}
+.doc-viewer-modal-v170{
+  position:relative;
+  width:min(980px,96vw);
+  max-height:92vh;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 28px 80px rgba(15,23,42,.35);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border:1px solid #e2e8f0;
+}
+.doc-viewer-head-v170{
+  height:56px;
+  padding:0 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #e2e8f0;
+  background:#f8fafc;
+  color:#0f172a;
+}
+.doc-viewer-x-v170{
+  border:0;
+  background:#fee2e2;
+  color:#991b1b;
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  font-size:22px;
+  font-weight:900;
+  cursor:pointer;
+  line-height:1;
+}
+.doc-viewer-body-v170{
+  padding:18px;
+  overflow:auto;
+  min-height:220px;
+  max-height:calc(92vh - 120px);
+}
+.doc-viewer-footer-v170{
+  padding:12px 16px;
+  border-top:1px solid #e2e8f0;
+  background:#f8fafc;
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+}
+.doc-viewer-frame-v170{
+  width:100%;
+  height:68vh;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fff;
+}
+.doc-viewer-img-wrap-v170{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  width:100%;
+}
+.doc-viewer-img-wrap-v170 img{
+  max-width:100%;
+  max-height:70vh;
+  object-fit:contain;
+  border-radius:12px;
+  border:1px solid #e2e8f0;
+  background:#fff;
+}
+.doc-viewer-file-title-v170{
+  font-weight:900;
+  margin-bottom:12px;
+  color:#0f172a;
+  word-break:break-word;
+}
+.doc-viewer-empty-v170{
+  min-height:260px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:10px;
+  color:#334155;
+  border:1px dashed #cbd5e1;
+  border-radius:14px;
+  background:#f8fafc;
+  padding:24px;
+}
+.doc-viewer-empty-v170 .ico{
+  font-size:42px;
+}
+.doc-viewer-box-v170{
+  border:1px solid #e2e8f0;
+  border-radius:14px;
+  background:#fff;
+  padding:16px;
+  line-height:1.6;
+  color:#0f172a;
+}
+.doc-viewer-med-v170{
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#f8fafc;
+  padding:12px;
+  margin:10px 0;
+}
+.doc-viewer-open-row-v170{
+  margin-top:10px;
+  display:flex;
+  justify-content:flex-end;
+}
+
+
+
+
+/* ZERO V17.1 — PDF/anexo visível e com botão direto */
+.doc-pdf-actions-v171{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  margin:0 0 10px;
+}
+.doc-viewer-object-v171{
+  display:block;
+  background:#f8fafc;
+}
+.doc-viewer-help-v171{
+  margin-top:8px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#eff6ff;
+  color:#1e3a8a;
+  font-size:13px;
+  border:1px solid #bfdbfe;
+}
+
+
+
+
+/* ZERO V17.2 — meta de documentos nos menus */
+.doc-menu-card-v172 .hist-consulta-title{
+  margin-bottom:6px;
+}
+.doc-menu-meta-v172{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  color:#64748b;
+  font-size:13px;
+  font-weight:700;
+}
+.doc-menu-meta-v172 span{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:999px;
+  padding:5px 9px;
+  max-width:100%;
+  word-break:break-word;
+}
+
+
+
+
+/* ZERO V17.3 — Laudo sem CID */
+.laudo-sem-cid-v173 #ld-cid,
+.laudo-sem-cid-v173 [for="ld-cid"]{
+  display:none !important;
+}
+.doc-menu-card-v172 .hist-consulta-cid-v136{
+  display:none;
+}
+
+
+
+
+/* ZERO V17.5 — campo de agenda no profissional */
+.prof-agenda-tipo-v175{
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+}
+.prof-agenda-ajuda-v175{
+  color:#64748b;
+  font-size:13px;
+  line-height:1.45;
+  display:flex;
+  align-items:center;
+}
+
+
+
+
+/* ZERO V17.6 — estabilização do modal profissional */
+.prof-modal-estavel-v176 .prof-backdrop-v151,
+.prof-modal-estavel-v176 .prof-modal-v151,
+.prof-modal-estavel-v176 .prof-body-v151,
+.prof-modal-estavel-v176 .prof-footer-v151{
+  animation:none !important;
+  transition:none !important;
+}
+.prof-agenda-tipo-v176{
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+}
+
+
+
+
+/* ZERO V17.7 — status bloqueio/desbloqueio do mês */
+.ag-month-open{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid #bbf7d0;
+  background:#dcfce7;
+  color:#166534;
+  padding:7px 11px;
+  border-radius:999px;
+  font-weight:900;
+}
+.ag-month-blocked{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid #fecaca;
+  background:#fee2e2;
+  color:#991b1b;
+  padding:7px 11px;
+  border-radius:999px;
+  font-weight:900;
+}
+
+
+
+
+/* ZERO V17.9 — Modal Profissional final, sem piscar script antigo */
+#profissionais-modal-root-v179{
+  position:relative;
+  z-index:1000000;
+}
+.prof-modal-estavel-v179 #profissionais-modal-root-v151,
+.prof-modal-estavel-v179 #profissionais-modal-root-v176{
+  display:none !important;
+}
+.prof-backdrop-v179{
+  position:fixed;
+  inset:0;
+  z-index:1000000;
+  background:rgba(15,23,42,.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+  animation:none !important;
+  transition:none !important;
+}
+.prof-modal-v179{
+  width:min(1120px,96vw);
+  max-height:92vh;
+  background:#fff;
+  border-radius:18px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 28px 80px rgba(15,23,42,.32);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  animation:none !important;
+  transition:none !important;
+  opacity:1 !important;
+  transform:none !important;
+}
+.prof-title-v179{
+  height:58px;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #e2e8f0;
+  background:#f8fafc;
+  font-weight:900;
+  color:#0f172a;
+}
+.prof-body-v179{
+  padding:16px;
+  overflow:auto;
+  min-height:0;
+}
+.prof-footer-v179{
+  padding:12px 16px;
+  border-top:1px solid #e2e8f0;
+  background:#f8fafc;
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.prof-agenda-tipo-v179{
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+}
+.prof-agenda-ajuda-v179{
+  color:#64748b;
+  font-size:13px;
+  line-height:1.45;
+  display:flex;
+  align-items:center;
+}
+.prof-modal-estavel-v179 .prof-backdrop-v179 *,
+.prof-modal-estavel-v179 .prof-modal-v179 *{
+  animation:none !important;
+  transition:none !important;
+}
+
+
+
+
+/* ZERO V18.1 — Atestado sem Observações */
+.atestado-sem-obs-v181 #at-obs,
+.atestado-sem-obs-v181 label[for="at-obs"],
+#modal-root #at-obs{
+  display:none !important;
+}
+
+
+
+
+/* ZERO V18.2 — Idade do paciente no cabeçalho */
+.pront-idade-v182{
+  font-weight:800;
+  color:#fff;
+}
+.rc-idade-v182{
+  min-width:110px;
+}
+
+
+
+
+/* ZERO V18.4 — idade nos cards sem interferir nos menus */
+.ag-slot-info strong{
+  line-height:1.25;
+}
+
+
+
+
+/* ZERO V18.5 — fallback visual dos menus */
+.menu-fallback-v185{
+  margin:18px;
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+}
+.menus-atalhos-v185{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+
+/* ZERO V18.6 — fallback dos menus destravados */
+.menu-fallback-v186{
+  margin:18px;
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+}
+
+
+
+
+/* ZERO V18.7 — campos CPF/Nascimento paciente */
+#pac-cpf,#pac-nasc,#pac-nascimento{
+  letter-spacing:.2px;
+}
+
+
+
+
+/* ZERO V18.8 — Paciente tipo sanguíneo e contatos */
+.pac-sangue-field-v188 select{
+  width:100%;
+}
+
+
+
+
+/* ZERO V18.9 — Grid do contato do paciente sem texto para fora */
+.cm-view-grid,
+#modal-root .cm-view-grid{
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  align-items:stretch;
+}
+.cm-view-item{
+  min-width:0 !important;
+  max-width:100% !important;
+  overflow:hidden !important;
+}
+.cm-view-item strong,
+.cm-view-item span{
+  max-width:100% !important;
+  min-width:0 !important;
+}
+.cm-view-item span{
+  display:block !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+  white-space:normal !important;
+  line-height:1.35;
+}
+.cm-view-item.pac-email-grid-v189 span,
+.pac-email-grid-v189{
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+  white-space:normal !important;
+}
+.paciente-contato-grid-v189{
+  grid-template-columns:repeat(auto-fit,minmax(155px,1fr)) !important;
+}
+@media (max-width:640px){
+  .cm-view-grid,
+  #modal-root .cm-view-grid,
+  .paciente-contato-grid-v189{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+
+
+/* ZERO V19.0 — Complemento do endereço no paciente */
+.pac-complemento-field-v190 input{
+  width:100%;
+}
+
+
+
+
+/* ZERO V19.1 — Modal cadastro paciente sem piscar */
+body.paciente-modal-estavel-v191 #modal-root,
+body.paciente-modal-estavel-v191 #modal-root *{
+  animation:none !important;
+  transition:none !important;
+}
+.paciente-modal-v191{
+  opacity:1 !important;
+  transform:none !important;
+  visibility:visible !important;
+}
+.paciente-modal-body-v191{
+  min-height:420px;
+}
+.paciente-form-grid-v191{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+}
+.paciente-form-grid-v191 > div{
+  min-width:0;
+}
+@media(max-width:900px){
+  .paciente-form-grid-v191{
+    grid-template-columns:1fr !important;
+  }
+  .paciente-form-grid-v191 .span-2,
+  .paciente-form-grid-v191 .span-3,
+  .paciente-form-grid-v191 .span-4{
+    grid-column:auto !important;
+  }
+}
+
+
+
+/* ZERO V19.2 — Declaração de comparecimento com horas */
+.atestado-horas-v192 .at-campo-comparecimento{
+  display:none;
+}
+
+
+
+/* ZERO V19.3 — horas da declaração visíveis quando selecionada */
+.atestado-horas-v193 .at-campo-comparecimento{
+  display:none;
+}
