@@ -1,7 +1,7 @@
 /* Clínica Mário — Service Worker V18.6
    Regra: não prender arquivo antigo em cache.
 */
-const CACHE_NAME = 'clinica-mario-v194-receita-sem-personalizado';
+const CACHE_NAME = 'clinica-mario-v195-lgpd-admin-logado';
 
 self.addEventListener('install', event => {
   self.skipWaiting();

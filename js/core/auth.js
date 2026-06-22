@@ -796,3 +796,36 @@ window.validarLogin = function(ev){ return Auth.login(ev); };
     return ret;
   };
 })();
+
+
+
+
+/* ZERO V19.5 — Reaplica LGPD corretamente no login/logout */
+(function(){
+  if(!window.Auth || Auth.__lgpdSoAdminLogadoV195) return;
+  Auth.__lgpdSoAdminLogadoV195=true;
+
+  const oldShowAppV195=Auth.showApp?.bind(Auth);
+  Auth.showApp=function(){
+    const ret=oldShowAppV195 ? oldShowAppV195(...arguments) : undefined;
+    setTimeout(()=>{
+      try{ window.LGPDOffline?.aplicarModoPrivacidade && LGPDOffline.aplicarModoPrivacidade(); }catch(e){}
+      try{ window.LGPDOffline?.renderIndicadorPrivacidade && LGPDOffline.renderIndicadorPrivacidade(); }catch(e){}
+    },120);
+    return ret;
+  };
+
+  const oldLogoutV195=(Auth.forceLogout || Auth.logout)?.bind(Auth);
+  Auth.forceLogout=function(ev){
+    try{ window.LGPDOffline?.removerIndicadorPrivacidadeV195 && LGPDOffline.removerIndicadorPrivacidadeV195(); }catch(e){}
+    try{
+      document.body.classList.remove('lgpd-mask');
+      document.documentElement.classList.remove('lgpd-mask');
+    }catch(e){}
+    return oldLogoutV195 ? oldLogoutV195(ev) : false;
+  };
+
+  Auth.logout=function(ev){
+    return Auth.forceLogout(ev);
+  };
+})();

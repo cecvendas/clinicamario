@@ -8523,3 +8523,12 @@ body.paciente-modal-estavel-v191 #modal-root *{
 .atestado-horas-v193 .at-campo-comparecimento{
   display:none;
 }
+
+
+
+
+/* ZERO V19.5 — botão privacidade só aparece para admin logado */
+body.logged-out .lgpd-privacy-status-v88,
+#login-page:not(.hidden) ~ #app-shell .lgpd-privacy-status-v88{
+  display:none !important;
+}

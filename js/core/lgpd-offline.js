@@ -505,3 +505,163 @@ setTimeout(()=>{try{LGPDOffline.init();}catch(e){}},600);
   document.addEventListener('DOMContentLoaded',()=>setTimeout(()=>LGPDOffline.aplicarModoPrivacidade(),150));
   setTimeout(()=>{try{LGPDOffline.aplicarModoPrivacidade();}catch(e){}},500);
 })();
+
+
+
+
+/* =========================================================
+   ZERO V19.5 — LGPD/Privacidade somente admin logado
+   Correções:
+   - Não aparece Privacidade ATIVA/DESATIVADA antes do login.
+   - Sem login não consegue ativar/desativar.
+   - Apenas Administrador pode ativar/desativar modo privacidade.
+   - Outros perfis respeitam o modo, mas não alteram.
+========================================================= */
+(function(){
+  if(!window.LGPDOffline || LGPDOffline.__somenteAdminLogadoV195) return;
+  LGPDOffline.__somenteAdminLogadoV195=true;
+
+  LGPDOffline.usuarioLogadoV195=function(){
+    try{
+      const u=window.Auth?.current || window.currentUser || JSON.parse(sessionStorage.getItem('CM_USER')||'{}') || {};
+      if(!u || !Object.keys(u).length) return null;
+      if(!(u.login || u.nome || u.email || u.id || u.perfil || u.role || u.tipo)) return null;
+      return u;
+    }catch(e){
+      return null;
+    }
+  };
+
+  LGPDOffline.perfilUsuarioV195=function(){
+    const u=this.usuarioLogadoV195();
+    if(!u) return '';
+    let p=String(u.perfil || u.role || u.tipo || u.cargo || '').trim().toLowerCase();
+    p=p.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    if(p==='administrador') p='admin';
+    return p;
+  };
+
+  LGPDOffline.podeGerenciarPrivacidadeV195=function(){
+    return this.perfilUsuarioV195()==='admin';
+  };
+
+  LGPDOffline.removerIndicadorPrivacidadeV195=function(){
+    const el=document.getElementById('lgpd-privacy-status-v88');
+    if(el) el.remove();
+  };
+
+  const oldAplicarV195=LGPDOffline.aplicarModoPrivacidade?.bind(LGPDOffline);
+  LGPDOffline.aplicarModoPrivacidade=function(){
+    const ativo=!!this.cfg().modoPrivacidade;
+
+    // A máscara pode continuar aplicada quando já estiver logado,
+    // mas nada de indicador/botão antes do login.
+    try{
+      document.body.classList.toggle('lgpd-mask', ativo && !!this.usuarioLogadoV195());
+      document.documentElement.classList.toggle('lgpd-mask', ativo && !!this.usuarioLogadoV195());
+    }catch(e){}
+
+    this.renderIndicadorPrivacidade();
+  };
+
+  LGPDOffline.togglePrivacidade=function(){
+    if(!this.usuarioLogadoV195()){
+      this.removerIndicadorPrivacidadeV195();
+      try{ Utils.toast('Faça login para alterar a privacidade.'); }catch(e){}
+      return false;
+    }
+
+    if(!this.podeGerenciarPrivacidadeV195()){
+      try{ Utils.toast('Somente Administrador pode ativar/desativar a privacidade.'); }catch(e){}
+      try{ this.audit && this.audit('bloqueio_privacidade','Perfil sem permissão tentou alterar LGPD'); }catch(e){}
+      this.renderIndicadorPrivacidade();
+      return false;
+    }
+
+    const cfg=this.cfg();
+    cfg.modoPrivacidade=!cfg.modoPrivacidade;
+    this.saveCfg(cfg);
+
+    const chk=document.querySelector('#lgpd-modo-privacidade,#lgpd-privacidade-check,input[onchange*="modoPrivacidade"]');
+    if(chk) chk.checked=cfg.modoPrivacidade;
+
+    try{ Utils.toast(cfg.modoPrivacidade?'Modo privacidade ATIVO.':'Modo privacidade DESATIVADO.'); }catch(e){}
+    try{ this.audit('modo_privacidade', cfg.modoPrivacidade?'ativou':'desativou'); }catch(e){}
+    return true;
+  };
+
+  LGPDOffline.setConfig=function(key,val){
+    if(!this.usuarioLogadoV195()){
+      this.removerIndicadorPrivacidadeV195();
+      try{ Utils.toast('Faça login para alterar LGPD.'); }catch(e){}
+      return false;
+    }
+
+    if(!this.podeGerenciarPrivacidadeV195()){
+      try{ Utils.toast('Somente Administrador pode alterar LGPD.'); }catch(e){}
+      return false;
+    }
+
+    const cfg=this.cfg();
+    cfg[key]=val;
+    this.saveCfg(cfg);
+    try{ this.audit('config_lgpd','Alterou '+key); }catch(e){}
+    try{ Utils.toast('Configuração LGPD salva.'); }catch(e){}
+    return true;
+  };
+
+  LGPDOffline.renderIndicadorPrivacidade=function(){
+    if(!this.usuarioLogadoV195() || !this.podeGerenciarPrivacidadeV195()){
+      this.removerIndicadorPrivacidadeV195();
+      return false;
+    }
+
+    let el=document.getElementById('lgpd-privacy-status-v88');
+    if(!el){
+      el=document.createElement('button');
+      el.id='lgpd-privacy-status-v88';
+      el.type='button';
+      document.body.appendChild(el);
+    }
+
+    el.onclick=function(ev){
+      if(ev){
+        ev.preventDefault();
+        ev.stopPropagation();
+      }
+      return LGPDOffline.togglePrivacidade();
+    };
+
+    const ativo=!!this.cfg().modoPrivacidade;
+    el.className='lgpd-privacy-status-v88 '+(ativo?'ativo':'inativo');
+    el.innerHTML=ativo?'🔐 Privacidade ATIVA':'🔓 Privacidade DESATIVADA';
+    el.title='Somente administrador pode ativar/desativar';
+    return true;
+  };
+
+  // Bloqueio extra em captura, inclusive se sobrar botão antigo no DOM/cache.
+  ['click','pointerdown','mousedown','touchstart'].forEach(evt=>{
+    document.addEventListener(evt,function(ev){
+      const alvo=ev.target && ev.target.closest ? ev.target.closest('#lgpd-privacy-status-v88,.lgpd-privacy-status-v88') : null;
+      if(!alvo) return;
+
+      if(!LGPDOffline.usuarioLogadoV195() || !LGPDOffline.podeGerenciarPrivacidadeV195()){
+        ev.preventDefault();
+        ev.stopPropagation();
+        try{ ev.stopImmediatePropagation(); }catch(e){}
+        LGPDOffline.removerIndicadorPrivacidadeV195();
+        if(LGPDOffline.usuarioLogadoV195()){
+          try{ Utils.toast('Somente Administrador pode ativar/desativar a privacidade.'); }catch(e){}
+        }
+        return false;
+      }
+    },true);
+  });
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    setTimeout(()=>LGPDOffline.aplicarModoPrivacidade(),150);
+    setTimeout(()=>LGPDOffline.renderIndicadorPrivacidade(),500);
+  });
+
+  setTimeout(()=>{try{LGPDOffline.aplicarModoPrivacidade();}catch(e){}},800);
+})();
