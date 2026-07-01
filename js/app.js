@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded',()=>App.init());
     if(!isPac) return;
 
     const btn=document.createElement('div');
-    return; btn.id='lgpd-paciente-acoes';
+    btn.id='lgpd-paciente-acoes';
     btn.className='lgpd-alert';
     btn.innerHTML=`🔐 LGPD: registre consentimento do paciente quando necessário.
       <button class="btn btn-sm btn-blue" style="margin-left:8px;" onclick="LGPDOffline.audit('lgpd_aviso_paciente','Visualizou aviso LGPD na tela do paciente');Utils.toast('Use o menu LGPD para acompanhar consentimentos e logs.')">Registrar/acompanhar</button>`;
