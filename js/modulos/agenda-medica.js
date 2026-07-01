@@ -345,7 +345,7 @@ window.AgendaMedica={
         return `<div class="ag-slot-print ocupado ${isProc?'procedimento':''}">
           <div class="ag-slot-time">${h}</div>
           <div class="ag-slot-info">
-            <strong>${Utils.esc(p.nome||ag.paciente||'Paciente')}</strong>
+            <strong>${Utils.esc((this.nomeComIdadeV184 ? this.nomeComIdadeV184(ag,p) : '') || p.nome || ag.paciente || 'Paciente')}</strong>
             <span>Tel: ${Utils.esc(p.telefone||p.tel||'')} • ${Utils.esc(ag.tipoConsulta||'Consulta')} • ${Utils.esc(ag.modalidade||'Presencial')}</span>
             <div class="ag-slot-extra"><span class="ag-mini-tag">${Utils.esc(ag.status||'Agendado')}</span>${ag.convenio?`<span class="ag-mini-tag">${Utils.esc(ag.convenio)}</span>`:''}</div>
           </div>
@@ -1260,7 +1260,7 @@ window.AgendaMedica={
           return `<div class="ag-slot-print ocupado ${isProc?'procedimento':''} status-${Utils.norm(ag.status||'agendado')}">
             <div class="ag-slot-time">${h}</div>
             <div class="ag-slot-info">
-              <strong>${Utils.esc(p.nome||ag.paciente||'Paciente')}</strong>
+              <strong>${Utils.esc((this.nomeComIdadeV184 ? this.nomeComIdadeV184(ag,p) : '') || p.nome || ag.paciente || 'Paciente')}</strong>
               <span>Tel: ${Utils.esc(p.telefone||p.tel||'')} • ${Utils.esc(ag.tipoConsulta||((ag.tipo==='procedimento')?'Procedimento':'Consulta'))} • ${Utils.esc(ag.modalidade||'Presencial')}</span>
               <div class="ag-slot-extra"><span class="ag-mini-tag">${Utils.esc(ag.status||'Agendado')}</span>${ag.convenio?`<span class="ag-mini-tag">${Utils.esc(ag.convenio)}</span>`:''}</div>
             </div>
@@ -2182,7 +2182,7 @@ window.AgendaMedica={
         return `<div class="ag-slot-print ocupado ${isProc?'procedimento':''}" style="${this.slotStyleV134(chaveStatus)}">
           <div class="ag-slot-time">${h}</div>
           <div class="ag-slot-info">
-            <strong>${Utils.esc(p.nome||ag.paciente||'Paciente')}</strong>
+            <strong>${Utils.esc((this.nomeComIdadeV184 ? this.nomeComIdadeV184(ag,p) : '') || p.nome || ag.paciente || 'Paciente')}</strong>
             <span>Tel: ${Utils.esc(p.telefone||p.tel||'')} • ${Utils.esc(ag.tipoConsulta||'Consulta')} • ${Utils.esc(ag.modalidade||'Presencial')}</span>
             <div class="ag-slot-extra"><span class="ag-mini-tag">${Utils.esc(ag.status||'Agendado')}</span>${ag.convenio?`<span class="ag-mini-tag">${Utils.esc(ag.convenio)}</span>`:''}${ag.valorPrevisto?`<span class="ag-mini-tag">R$ ${Utils.money(ag.valorPrevisto)}</span>`:''}</div>
           </div>
@@ -2471,7 +2471,7 @@ window.AgendaMedica={
         return `<div class="ag-slot-print ocupado ${isProc?'procedimento':''}">
           <div class="ag-slot-time">${h}</div>
           <div class="ag-slot-info">
-            <strong>${Utils.esc(p.nome||ag.paciente||'Paciente')}</strong>
+            <strong>${Utils.esc((this.nomeComIdadeV184 ? this.nomeComIdadeV184(ag,p) : '') || p.nome || ag.paciente || 'Paciente')}</strong>
             <span>Tel: ${Utils.esc(p.telefone||p.tel||'')} • ${Utils.esc(ag.tipoConsulta||'Consulta')} • ${Utils.esc(ag.modalidade||'Presencial')}</span>
             <div class="ag-slot-extra"><span class="ag-mini-tag">${Utils.esc(ag.status||'Agendado')}</span>${ag.convenio?`<span class="ag-mini-tag">${Utils.esc(ag.convenio)}</span>`:''}${ag.valorPrevisto?`<span class="ag-mini-tag">R$ ${Utils.money(ag.valorPrevisto)}</span>`:''}</div>
           </div>
@@ -3765,7 +3765,7 @@ window.AgendaMedica={
         return `<div class="ag-slot-print ocupado ${isProc?'procedimento':''} status-${Utils.norm(ag.status||'agendado')} ag-color-card-v155" style="${this.corCardV155(chave)}">
           <div class="ag-slot-time">${h}</div>
           <div class="ag-slot-info">
-            <strong>${Utils.esc(p.nome||ag.paciente||'Paciente')}</strong>
+            <strong>${Utils.esc((this.nomeComIdadeV184 ? this.nomeComIdadeV184(ag,p) : '') || p.nome || ag.paciente || 'Paciente')}</strong>
             <span>Tel: ${Utils.esc(p.telefone||p.tel||'')} • ${Utils.esc(ag.tipoConsulta||((ag.tipo==='procedimento')?'Procedimento':'Consulta'))} • ${Utils.esc(ag.modalidade||'Presencial')}</span>
             <div class="ag-slot-extra"><span class="ag-mini-tag">${Utils.esc(ag.status||'Agendado')}</span>${ag.convenio?`<span class="ag-mini-tag">${Utils.esc(ag.convenio)}</span>`:''}${ag.valorPrevisto?`<span class="ag-mini-tag">R$ ${Utils.money(ag.valorPrevisto)}</span>`:''}</div>
           </div>
